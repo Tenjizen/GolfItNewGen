@@ -16,18 +16,12 @@ public class Balle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Pointer
-        Cursor.lockState = CursorLockMode.Locked;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        //pointer escape
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
+
     }
 }
