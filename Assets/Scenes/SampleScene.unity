@@ -1590,11 +1590,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c48a7fef4737444b55e158fcc8995c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 8
+  power: 10
   rb: {fileID: 2095817420}
   ball: {fileID: 2095817419}
-  minPower: {x: -3, y: -3}
-  maxPower: {x: 3, y: 3}
+  minPower: {x: -4, y: -4}
+  maxPower: {x: 4, y: 4}
   dir: {fileID: 2095817427}
 --- !u!120 &2095817426
 LineRenderer:
