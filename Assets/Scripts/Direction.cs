@@ -3,75 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
 public class Direction : MonoBehaviour
 {
+    public LineRenderer lr;
 
-
-
-    public int Force;
-    public GameObject DirectionLigne;
-    public Text TextForce;
-    public GameObject textForce;
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        //lineRenderer.positionCount = 2;
-        //Pointer
-        //Cursor.lockState = CursorLockMode.Locked;
+        lr = GetComponent<LineRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RenderLine(Vector3 startMousePos, Vector3 endMousePos)
     {
+        lr.positionCount = 2;
+        Vector3[] points = new Vector3[2];
+        points[0] = startMousePos;
+        points[1] = endMousePos;
 
-
-
-
-        Base();
-        //FaceMouse();
+        lr.SetPositions(points);
     }
-    private void FaceMouse()
+
+    public void EndLine()
     {
-        Vector3 mousePos = Input.mousePosition;
-        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        lr.positionCount = 0;
+    }
 
-        Vector2 direction = new Vector2(
-            mousePos.x - transform.position.x,
-            mousePos.y - transform.position.y
-            );
-        transform.right = direction;
-    }
-    private void Base()
-    {
-        transform.position = Balle.Instance.playerBall.GetComponent<Transform>().position;
-        if (Balle.Instance.playerBall.GetComponent<Rigidbody2D>().velocity.magnitude < 0.1)
-        {
-            if (Input.GetMouseButton(0))
-            {
-                Balle.Instance.playerBall.GetComponent<Rigidbody2D>().AddForce(transform.TransformDirection(Vector3.left) * Force);
-                //right a l'endroit left a l'envers
-            }
-            //if (Input.GetMouseButton(1))
-            //{
-            //    if (Force < 2000)
-            //        Force += 5;
-            //}
-            //else if (Input.GetMouseButtonDown(2))
-            //    Force = 0;
-            //TextForce.text = "Puissance : " + Force / 20 + "%";
-            //DirectionLigne.SetActive(true);
-            //textForce.SetActive(true);
-        }
-        //else if (Balle.Instance.playerBall.GetComponent<Rigidbody2D>().velocity.magnitude > 0.1)
-        //{
-        //    //DirectionLigne.SetActive(false);
-        //    //textForce.SetActive(false);
-        //}
-        //pointer escape
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //{
-        //    Cursor.lockState = CursorLockMode.None;
-        //    Cursor.visible = true;
-        //}
-    }
 }

@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Line : MonoBehaviour
 {
-    private LineRenderer lineRenderer;
-    private Vector2 mousePos;
-    private Vector2 startMousePos;
+    public float power = 10f;
+    public Rigidbody2D rb;
+    public GameObject ball;
+    public Vector2 minPower;
+    public Vector2 maxPower;
 
-    private float distance;
+    public Direction dir;
 
+    Camera cam;
+
+    Vector2 force;
+    Vector3 startMousePos;
+    Vector3 endMousePos;
 
     public static Line Instance;
-    // Start is called before the first frame update
 
     void Awake()
     {
@@ -20,23 +26,50 @@ public class Line : MonoBehaviour
     }
     void Start()
     {
-        lineRenderer = GetComponent<LineRenderer>();
+        cam = Camera.main;
+        dir = GetComponent<Direction>();
+    }
+
+    void Update()
+    {
+
+        if (Reticle.Instance.IsSelected == true)
+            MouseDown();
+
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MouseDown()
     {
+
         if (Input.GetMouseButtonDown(0))
-            startMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        {
+            //startMousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+            startMousePos = ball.transform.position;
+            startMousePos.z = 15;
+        }
 
         if (Input.GetMouseButton(0))
         {
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            lineRenderer.SetPosition(0, new Vector3(startMousePos.x, startMousePos.y, 0f));
-            lineRenderer.SetPosition(1, new Vector3(mousePos.x, mousePos.y, 0f));
-            distance = (mousePos - startMousePos).magnitude;
-            Balle.Instance.playerBall.GetComponent<Rigidbody2D>().AddForce(transform.TransformDirection(Vector2.Lerp(mousePos,startMousePos,0f) * distance));
+            Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
+            currentPoint.z = 15;
+            dir.RenderLine(startMousePos, currentPoint);
+        }
+
+    }
+    public void MouseUp()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            endMousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+            endMousePos.z = 15;
+
+            force = new Vector2(Mathf.Clamp(
+                startMousePos.x - endMousePos.x, minPower.x, maxPower.x),
+                Mathf.Clamp(startMousePos.y - endMousePos.y, minPower.y, maxPower.y)
+                );
+            rb.AddForce(force * power, ForceMode2D.Impulse);
+            dir.EndLine();
         }
     }
 }
