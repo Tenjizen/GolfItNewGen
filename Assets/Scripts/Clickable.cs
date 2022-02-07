@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Clickable : MonoBehaviour
 {
-    //public GameObject playerBall;
 
     [SerializeField] private Reticle reticleManager;
 

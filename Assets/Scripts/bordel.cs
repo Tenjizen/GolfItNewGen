@@ -6,7 +6,7 @@ public class bordel : MonoBehaviour
 {
 
 
-    /*public GameObject DirectionLigne;
+    public GameObject DirectionLigne;
 
 
     void Start()
@@ -16,8 +16,8 @@ public class bordel : MonoBehaviour
 
     void Update()
     {
-        //Base();
-        //FaceMouse();
+        Base();
+        FaceMouse();
     }
     private void FaceMouse()
     {
@@ -32,15 +32,6 @@ public class bordel : MonoBehaviour
     }
     private void Base()
     {
-        transform.position = Clickable.Instance.playerBall.GetComponent<Transform>().position;
-        if (Clickable.Instance.playerBall.GetComponent<Rigidbody2D>().velocity.magnitude < 0.1)
-        {
-            if (Input.GetMouseButton(0))
-            {
-                Clickable.Instance.playerBall.GetComponent<Rigidbody2D>().AddForce(transform.TransformDirection(Vector3.left) * Force);
-                //right a l'endroit left a l'envers
-            }
-        }
-
-    }*/
+        transform.position = MainGame.Instance.playerBall.GetComponent<Transform>().position;
+    }
 }
