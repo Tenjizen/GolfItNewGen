@@ -13,7 +13,7 @@ public class Reticle : MonoBehaviour
     }
     public void Selected(GameObject selected)
     {
-        if (Line.Instance.rb.velocity.magnitude < 0.0001f)
+        if (Line.Instance.rb.velocity.magnitude < 0.001f)
         {
             IsSelected = true;
         }
