@@ -20,7 +20,7 @@ public class Reticle : MonoBehaviour
     }
     public void Deselect()
     {
-        if (Line.Instance.rb.velocity.magnitude < 0.0001f)
+        if (Line.Instance.rb.velocity.magnitude < 0.0000001f)
         {
             IsSelected = false;
             Line.Instance.MouseUp();

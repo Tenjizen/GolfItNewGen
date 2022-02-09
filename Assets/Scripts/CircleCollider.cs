@@ -13,6 +13,13 @@ public class CircleCollider : MonoBehaviour
     public float radius = 10f; // this is the range you want the player to move without restriction
 
     Vector2 m_direction = Vector2.zero;
+
+    public static CircleCollider Instance;
+
+    void Awake()
+    {
+        Instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {

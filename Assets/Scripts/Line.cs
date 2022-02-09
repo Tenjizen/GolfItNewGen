@@ -7,6 +7,7 @@ public class Line : MonoBehaviour
     public float power = 10f;
     public Rigidbody2D rb;
     public GameObject ball;
+    public GameObject player;
     public Vector2 minPower;
     public Vector2 maxPower;
 
@@ -35,7 +36,18 @@ public class Line : MonoBehaviour
 
         if (Reticle.Instance.IsSelected == true)
             MouseDown();
-
+        if (rb.velocity.magnitude > 0.1f)
+        {
+            player.SetActive(false);
+            CircleCollider.Instance.circle.SetActive(false);
+            //player.transform.position = ball.transform.position;
+        }
+        else
+        {
+            player.SetActive(true);
+            CircleCollider.Instance.circle.SetActive(true);
+        }
+            
 
     }
 
