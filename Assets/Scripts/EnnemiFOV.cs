@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class MainGame : MonoBehaviour
+public class EnnemiFOV : MonoBehaviour
 {
     //public GameObject playerBall;
 
@@ -16,7 +16,7 @@ public class MainGame : MonoBehaviour
     private bool flipFOV = true;
 
 
-    public static MainGame Instance;
+    public static EnnemiFOV Instance;
     void Awake()
     {
         Instance = this;
@@ -40,11 +40,11 @@ public class MainGame : MonoBehaviour
         }
     }
 
-    int oldDir = -1;
+    //int oldDir = -1;
     IEnumerator RandomAimDir()
     {
         //Print the time of when the function is first called.
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+        //Debug.Log("Started Coroutine at timestamp : " + Time.time);
 
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(5);
@@ -83,7 +83,7 @@ public class MainGame : MonoBehaviour
                     aimDirection.y = 0;
                 }*/
         //After we have waited 5 seconds print the time again.
-        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        //Debug.Log("Finished Coroutine at timestamp : " + Time.time);
     }
 }
 

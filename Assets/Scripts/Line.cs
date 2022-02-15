@@ -31,6 +31,7 @@ public class Line : MonoBehaviour
 
     void Update()
     {
+        //Debug.Log("vitesse  =  " + rb.velocity.magnitude); // si > 5 rentre pas dans le trou
         if (Reticle.Instance.IsSelected == true)
             MouseDown();
         if (rb.velocity.magnitude > 0.01f)
