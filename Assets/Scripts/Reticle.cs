@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Reticle : MonoBehaviour
@@ -13,7 +11,7 @@ public class Reticle : MonoBehaviour
     }
     public void Selected(GameObject selected)
     {
-        if (Line.Instance.rb.velocity.magnitude < 0.001f)
+        if (Line.Instance.rb.velocity.magnitude < 0.01f)
         {
             IsSelected = true;
         }
@@ -26,6 +24,4 @@ public class Reticle : MonoBehaviour
             Line.Instance.MouseUp();
         }
     }
-
-
 }

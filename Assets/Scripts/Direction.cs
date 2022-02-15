@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
-
 
 public class Direction : MonoBehaviour
 {
@@ -28,5 +23,4 @@ public class Direction : MonoBehaviour
     {
         lr.positionCount = 0;
     }
-
 }

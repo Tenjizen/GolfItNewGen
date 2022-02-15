@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Line : MonoBehaviour
@@ -23,51 +21,44 @@ public class Line : MonoBehaviour
 
     void Awake()
     {
+        cam = Camera.main;
         Instance = this;
     }
     void Start()
     {
-        cam = Camera.main;
         dir = GetComponent<Direction>();
     }
 
     void Update()
     {
-
         if (Reticle.Instance.IsSelected == true)
             MouseDown();
-        if (rb.velocity.magnitude > 0.1f)
+        if (rb.velocity.magnitude > 0.01f)
         {
             player.SetActive(false);
             CircleCollider.Instance.circle.SetActive(false);
-            //player.transform.position = ball.transform.position;
         }
         else
         {
             player.SetActive(true);
             CircleCollider.Instance.circle.SetActive(true);
         }
-            
-
     }
 
     public void MouseDown()
     {
-
         if (Input.GetMouseButtonDown(0))
         {
-            //startMousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+            startMousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             startMousePos = ball.transform.position;
             startMousePos.z = 15;
         }
-
         if (Input.GetMouseButton(0))
         {
             Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
             currentPoint.z = 15;
             dir.RenderLine(startMousePos, currentPoint);
         }
-
     }
     public void MouseUp()
     {
