@@ -7,23 +7,24 @@ public class EnnemiFOV : MonoBehaviour
 
     [SerializeField] private Vector3 aimDirection;
     [SerializeField] private Transform prefabFieldOfView;
-    [SerializeField] private float fov = 90f;
+    [SerializeField] private Transform ParentFoV;
     [SerializeField] private float viewDist = 20f;
-    
-    
-    
-    private FieldOfView fieldOfView;
+    public float fov = 90f;
+
+    private float oldFoV;
+    private FieldOfView fieldOfView; 
     private bool flipFOV = true;
 
-
     public static EnnemiFOV Instance;
-    void Awake()
+    private void Awake()
     {
         Instance = this;
     }
     private void Start()
     {
-        fieldOfView = Instantiate(prefabFieldOfView, null).GetComponent<FieldOfView>();
+        //ParentFoV.transform.position = this.transform.position; 
+        fieldOfView = Instantiate(prefabFieldOfView, ParentFoV).GetComponent<FieldOfView>();
+        oldFoV = fov;
     }
 
     private void Update()
@@ -38,15 +39,17 @@ public class EnnemiFOV : MonoBehaviour
             flipFOV = false;
             StartCoroutine(RandomAimDir());
         }
+
+        //if (KillEnnemi.Instance.Killed)
+        //    fov = 0f;
+        //else
+        //    fov = oldFoV;
     }
 
     //int oldDir = -1;
     IEnumerator RandomAimDir()
     {
-        //Print the time of when the function is first called.
-        //Debug.Log("Started Coroutine at timestamp : " + Time.time);
 
-        //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(5);
 
 
@@ -82,8 +85,6 @@ public class EnnemiFOV : MonoBehaviour
                     aimDirection.x = 1; //bas
                     aimDirection.y = 0;
                 }*/
-        //After we have waited 5 seconds print the time again.
-        //Debug.Log("Finished Coroutine at timestamp : " + Time.time);
     }
 }
 

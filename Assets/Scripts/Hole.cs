@@ -4,56 +4,42 @@ using UnityEngine;
 
 public class Hole : MonoBehaviour
 {
+    [SerializeField] private Transform target;
+    [SerializeField] private float smoothSpeed = 0.15f;
+    [SerializeField] private Vector2 velocity = Vector2.zero;
 
-    //public GameObject Ball;
+    
     public float maxSpeedForGoal = 5f;
+    public bool inHole = false;
 
     public static Hole Instance;
 
-    void Awake()
+    private void Awake()
     {
         Instance = this;
     }
 
     private void Start()
     {
-            Debug.Log(Reticle.Instance.ready);
+        
     }
 
     private void Update()
     {
-        if(Reticle.Instance.ready == false)
-            Line.Instance.ball.transform.position = Vector2.MoveTowards(Line.Instance.ball.transform.position, target.transform.position, smoothSpeed*Time.deltaTime);
-
+        if (inHole == true)
+        {
+            Line.Instance.ball.transform.position = Vector2.MoveTowards(Line.Instance.ball.transform.position, target.transform.position, smoothSpeed * Time.deltaTime);
+        }
     }
-    /* void OnTriggerEnter2D(Collider2D obj)
-     {
-         if (obj.transform.tag == "Ball" && Line.Instance.rb.velocity.magnitude < maxSpeedForGoal)
-         {
 
-         }
-     }*/
-
-
-
-    public Transform target;
-
-    public float smoothSpeed = 0.15f;
-    public Vector2 velocity = Vector2.zero;
-
-    void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        
         if (col.transform.tag == "Ball" && Line.Instance.rb.velocity.magnitude < maxSpeedForGoal)
         {
-             //StartCoroutine(Goal(col.gameObject));
             //Debug.Log("triggers!");
+            inHole = true;
             Reticle.Instance.ready = false;
             Line.Instance.rb.velocity = velocity;
         }
-
-        
     }
-    
-
 }

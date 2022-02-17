@@ -3,17 +3,17 @@ using UnityEngine;
 public class FollowCam2D : MonoBehaviour
 {
 
-    Camera cam;
-    public Transform target;
+    private Camera cam;
 
-    public float smoothSpeed = 0.15f;
-    public Vector3 velocity = Vector3.zero;
-    
-    void Start()
+    [SerializeField] private Transform target;
+    [SerializeField] private float smoothSpeed = 0.15f;
+    [SerializeField] private Vector3 velocity = Vector3.zero;
+
+    private void Start()
     {
         cam = Camera.main;
     }
-    void FixedUpdate()
+    private void FixedUpdate()
     {
             Vector3 point = cam.WorldToViewportPoint(target.position);
             Vector3 delta = target.position - cam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z));

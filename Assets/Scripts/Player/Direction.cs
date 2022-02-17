@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Direction : MonoBehaviour
 {
-    public LineRenderer lr;
+    [SerializeField] private LineRenderer lr;
 
     private void Awake()
     {

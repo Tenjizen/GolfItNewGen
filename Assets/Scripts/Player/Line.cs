@@ -2,34 +2,33 @@ using UnityEngine;
 
 public class Line : MonoBehaviour
 {
-    public float power = 10f;
+    [SerializeField] private float power = 10f;
+    [SerializeField] private Vector2 minPower;
+    [SerializeField] private Vector2 maxPower;
+    [SerializeField] private Direction dir;
+
+    public GameObject player;
     public Rigidbody2D rb;
     public GameObject ball;
-    public GameObject player;
-    public Vector2 minPower;
-    public Vector2 maxPower;
 
-    public Direction dir;
-
-    Camera cam;
-
-    Vector2 force;
-    Vector3 startMousePos;
-    Vector3 endMousePos;
+    private Camera cam;
+    private Vector2 force;
+    private Vector3 startMousePos;
+    private Vector3 endMousePos;
 
     public static Line Instance;
 
-    void Awake()
+    private void Awake()
     {
         cam = Camera.main;
         Instance = this;
     }
-    void Start()
+    private void Start()
     {
         dir = GetComponent<Direction>();
     }
 
-    void Update()
+    private void Update()
     {
         //Debug.Log("vitesse  =  " + rb.velocity.magnitude); // si > 5 rentre pas dans le trou
         if (Reticle.Instance.IsSelected == true)
@@ -41,8 +40,19 @@ public class Line : MonoBehaviour
         }
         else
         {
-            player.SetActive(true);
-            CircleCollider.Instance.circle.SetActive(true);
+            if (CircleCollider.Instance.countShot >= CircleCollider.Instance.shotMax)
+            {
+                player.SetActive(false);
+                CircleCollider.Instance.circle.SetActive(false);
+            }
+            else
+            {
+                if (!Hole.Instance.inHole)
+                {
+                    player.SetActive(true);
+                    CircleCollider.Instance.circle.SetActive(true);
+                }
+            }
         }
     }
 

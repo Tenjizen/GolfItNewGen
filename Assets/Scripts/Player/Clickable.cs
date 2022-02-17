@@ -6,7 +6,8 @@ public class Clickable : MonoBehaviour
     [SerializeField] private Reticle reticleManager;
 
     public static Clickable Instance;
-    void Awake()
+
+    private void Awake()
     {
         Instance = this;
     }

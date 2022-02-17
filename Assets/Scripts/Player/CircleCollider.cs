@@ -2,16 +2,21 @@ using UnityEngine;
 
 public class CircleCollider : MonoBehaviour
 {
-    public float MoveForce = 20f;
-    public Rigidbody2D player; // get the player transform, or w/e object you want to limit in a circle
-    public GameObject circle;  // this is a location that is set to the middle of my world, it will be the center of your circle.
-    public float radius = 10f; // this is the range you want the player to move without restriction
+    [SerializeField] private float MoveForce = 20f;
+    [SerializeField] private Rigidbody2D player; // get the player transform, or w/e object you want to limit in a circle
+    [SerializeField] private float radius = 10f; // this is the range you want the player to move without restriction
 
-    Vector2 m_direction = Vector2.zero;
+    public GameObject circle;  // this is a location that is set to the middle of my world, it will be the center of your circle.
+    public int shotMax;
+    public int countShot;
+
+
+
+    private Vector2 m_direction = Vector2.zero;
 
     public static CircleCollider Instance;
 
-    void Awake()
+    private void Awake()
     {
         Instance = this;
     }
