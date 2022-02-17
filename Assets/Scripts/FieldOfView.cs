@@ -51,6 +51,7 @@ public class FieldOfView : MonoBehaviour
                 {
                     //Hit object
                     vertex = raycastHit2D.point;
+                //Debug.Log("Salut je test " + viewDist);
                 }
                 vertices[vertexIndex] = vertex;
 

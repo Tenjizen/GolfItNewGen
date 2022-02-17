@@ -1,30 +1,36 @@
-using UnityEngine;
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class EnnemiFOV : MonoBehaviour
 {
-    //public GameObject playerBall;
+    [SerializeField] private SpriteRenderer EnnemiImage;
+    [SerializeField] private Sprite spriteEnnemi;
+    [SerializeField] private Sprite spriteEnnemiDied;
 
     [SerializeField] private Vector3 aimDirection;
-    [SerializeField] private Transform prefabFieldOfView;
-    [SerializeField] private Transform ParentFoV;
-    [SerializeField] private float viewDist = 20f;
+    public float viewDist = 20f;
+    public Transform prefabFieldOfView;
+    public Transform ParentFoV;
     public float fov = 90f;
 
-    private float oldFoV;
-    private FieldOfView fieldOfView; 
+    private FieldOfView fieldOfView;
     private bool flipFOV = true;
 
+    private bool IsDie = false;
+
     public static EnnemiFOV Instance;
+
     private void Awake()
     {
         Instance = this;
     }
+
     private void Start()
     {
-        //ParentFoV.transform.position = this.transform.position; 
         fieldOfView = Instantiate(prefabFieldOfView, ParentFoV).GetComponent<FieldOfView>();
-        oldFoV = fov;
+        EnnemiImage.sprite = spriteEnnemi;
     }
 
     private void Update()
@@ -39,22 +45,14 @@ public class EnnemiFOV : MonoBehaviour
             flipFOV = false;
             StartCoroutine(RandomAimDir());
         }
-
-        //if (KillEnnemi.Instance.Killed)
-        //    fov = 0f;
-        //else
-        //    fov = oldFoV;
     }
-
-    //int oldDir = -1;
     IEnumerator RandomAimDir()
     {
-
         yield return new WaitForSeconds(5);
 
 
         //flip
-        aimDirection.x *= -1; 
+        aimDirection.x *= -1;
         aimDirection.y *= -1;
         flipFOV = true;
 
@@ -86,5 +84,16 @@ public class EnnemiFOV : MonoBehaviour
                     aimDirection.y = 0;
                 }*/
     }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (!IsDie && col.transform.tag == "Ball" && Line.Instance.rb.velocity.magnitude > Hole.Instance.maxSpeedForGoal)
+        {
+            Debug.Log("triggers! ");
+            List.Instance.currentCollisions.Add(this.gameObject);
+            //Destroy(this.gameObject);
+            Destroy(fieldOfView.gameObject);
+            EnnemiImage.sprite = spriteEnnemiDied;
+            IsDie = true;
+        }
+    }
 }
-
