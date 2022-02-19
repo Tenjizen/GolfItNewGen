@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
+using UnityEngine.SceneManagement;
 
 public class FieldOfView : MonoBehaviour
 {
     [SerializeField] private LayerMask layerMask;
+    [SerializeField] private LayerMask playerMask;
+    [SerializeField] private LayerMask BallMask;
+
 
     private Mesh mesh;
     private float fov;
@@ -13,9 +17,21 @@ public class FieldOfView : MonoBehaviour
     private Vector3 origin;
     private float startingAngle;
 
+    private bool collision = false;
+    
+
+    public static FieldOfView Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+
     private void Start()
     {
         mesh = new Mesh();
+
         GetComponent<MeshFilter>().mesh = mesh;
         origin = Vector3.zero;
         fov = 90f;
@@ -24,55 +40,103 @@ public class FieldOfView : MonoBehaviour
 
     private void Update()
     {
-        
-            int rayCount = 50;          
-            float angle = startingAngle;
-            float angleIncrease = (fov / rayCount);
 
-            Vector3[] vertices = new Vector3[rayCount + 1 + 1];
-            Vector2[] uv = new Vector2[vertices.Length];
-            int[] triangles = new int[rayCount * 3];
+        int rayCount = 50;
+        float angle = startingAngle;
+        float angleIncrease = (fov / rayCount);
 
-            vertices[0] = origin;
+        Vector3[] vertices = new Vector3[rayCount + 1 + 1];
+        Vector2[] uv = new Vector2[vertices.Length];
+        int[] triangles = new int[rayCount * 3];
 
-            int vertexIndex = 1;
-            int triangleIndex = 0;
-            for (int i = 0; i <= rayCount; i++)
+        vertices[0] = origin;
+
+        int vertexIndex = 1;
+        int triangleIndex = 0;
+
+
+
+
+        for (int i = 0; i <= rayCount; i++)
+        {
+            Vector3 vertex; //= origin + UtilsClass.GetVectorFromAngle(angle) * viewDist; 
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDist, layerMask);
+            if (raycastHit2D.collider == null)
             {
-                Vector3 vertex; //= origin + UtilsClass.GetVectorFromAngle(angle) * viewDist; 
-                RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDist, layerMask);
-                if (raycastHit2D.collider == null)
-                {
-                    //no hit
-                    vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDist;
+                //no hit
+                vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDist;
 
-                }
-                else
-                {
-                    //Hit object
-                    vertex = raycastHit2D.point;
+            }
+            else
+            {
+                //Hit object
+                vertex = raycastHit2D.point;
                 //Debug.Log("Salut je test " + viewDist);
-                }
-                vertices[vertexIndex] = vertex;
+            }
+            RaycastHit2D raycastHitPlayer2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDist, playerMask);
+            RaycastHit2D raycastHitBall2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDist, BallMask);
 
-                if (i > 0)
+            if (raycastHitBall2D.collider == null)
+            {
+                //no hit
+                vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDist;
+            }
+            else
+            {
+                if (!CircleCollider.Instance.restart && !Reticle.Instance.ready)
                 {
-                    triangles[triangleIndex + 0] = 0;
-                    triangles[triangleIndex + 1] = vertexIndex - 1;
-                    triangles[triangleIndex + 2] = vertexIndex;
-
-                    triangleIndex += 3;
+                    Debug.Log("a modif en restart in FieldOfView script " + raycastHitPlayer2D.collider);
+                    CircleCollider.Instance.restart = true;
+                    collision = true;
+                    Reticle.Instance.ready = false;
                 }
-                vertexIndex++;
-                angle -= angleIncrease;
+            }
+            if (raycastHitPlayer2D.collider == null)
+            {
+                //no hit
+                vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDist;
+            }
+            else
+            {
+                if (!CircleCollider.Instance.restart && !Reticle.Instance.ready)
+                {
+                    Debug.Log("a modif en restart in FieldOfView script " + raycastHitPlayer2D.collider);
+                    CircleCollider.Instance.restart = true;
+                    collision = true;
+                    Reticle.Instance.ready = false;
+                }
             }
 
-            mesh.vertices = vertices;
-            mesh.uv = uv;
-            mesh.triangles = triangles;
 
-        
+            vertices[vertexIndex] = vertex;
+
+
+            if (i > 0)
+            {
+                triangles[triangleIndex + 0] = 0;
+                triangles[triangleIndex + 1] = vertexIndex - 1;
+                triangles[triangleIndex + 2] = vertexIndex;
+
+                triangleIndex += 3;
+            }
+            vertexIndex++;
+            angle -= angleIncrease;
+        }
+
+        mesh.vertices = vertices;
+        mesh.uv = uv;
+        mesh.triangles = triangles;
+
+        if (CircleCollider.Instance.restart && Line.Instance.rb.velocity.magnitude < 0.00001f && collision)
+        {
+            collision = false;
+            StartCoroutine(Reticle.Instance.RestartLoadScene());
+        }
+
     }
+
+
+
 
     public void SetOrigin(Vector3 origin)
     {

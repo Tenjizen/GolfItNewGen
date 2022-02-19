@@ -8,6 +8,7 @@ TagManager:
   - hole
   - Button
   - Ennemi
+  - FoV
   layers:
   - Default
   - TransparentFX

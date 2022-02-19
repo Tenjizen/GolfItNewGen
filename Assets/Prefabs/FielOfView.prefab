@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7078491146454598415}
   m_Layer: 0
   m_Name: FielOfView
-  m_TagString: Untagged
+  m_TagString: FoV
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,6 +48,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  BallMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!33 &7078491146454598414
 MeshFilter:
   m_ObjectHideFlags: 0

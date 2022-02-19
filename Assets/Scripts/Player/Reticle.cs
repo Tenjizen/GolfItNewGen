@@ -1,9 +1,12 @@
 using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Reticle : MonoBehaviour
 {
     public bool IsSelected = false;
     public bool ready = true;
+    
 
     
 
@@ -18,6 +21,7 @@ public class Reticle : MonoBehaviour
     private void Start()
     {
         CircleCollider.Instance.countShot = 0;
+        ready = true;
     }
 
     public void Selected(GameObject selected)
@@ -38,9 +42,33 @@ public class Reticle : MonoBehaviour
     }
     private void Update()
     {
-        if (CircleCollider.Instance.countShot >= CircleCollider.Instance.shotMax)
+        if (!CircleCollider.Instance.restart && CircleCollider.Instance.countShot >= CircleCollider.Instance.shotMax)
         {
             ready = false;
+            if (!ready && Line.Instance.rb.velocity.magnitude < 0.0000001f)
+            {
+                CircleCollider.Instance.restart = true;
+                Debug.Log("ready false");
+                StartCoroutine(RestartLoadScene());
+            }
         }
+        //if (restart)
+        //{
+        //    Debug.Log("restart true");
+        //    RestartScene();
+        //}
+    }
+    private void RestartScene()
+    {
+        StartCoroutine(RestartLoadScene());
+
+    }
+
+    public IEnumerator RestartLoadScene()
+    {
+        Debug.Log("restart waiting");
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 }

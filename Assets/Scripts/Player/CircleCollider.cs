@@ -10,7 +10,7 @@ public class CircleCollider : MonoBehaviour
     public int shotMax;
     public int countShot;
 
-
+    public bool restart = false;
 
     private Vector2 m_direction = Vector2.zero;
 
@@ -20,6 +20,11 @@ public class CircleCollider : MonoBehaviour
     {
         Instance = this;
     }
+    private void Start()
+    {
+        restart = false;
+    }
+
     private void Update()
     {
         circle.transform.position = Line.Instance.ball.GetComponent<Transform>().position;

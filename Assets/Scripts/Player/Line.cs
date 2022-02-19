@@ -35,25 +35,26 @@ public class Line : MonoBehaviour
             MouseDown();
         if (rb.velocity.magnitude > 0.01f)
         {
-            player.SetActive(false);
-            CircleCollider.Instance.circle.SetActive(false);
+            Reticle.Instance.ready = false;
+        }
+        else if(rb.velocity.magnitude < 0.01f && !Hole.Instance.inHole && !CircleCollider.Instance.restart)
+            Reticle.Instance.ready = true;
+
+        if (!Reticle.Instance.ready)
+        {
+            NotReady();
         }
         else
         {
-            if (CircleCollider.Instance.countShot >= CircleCollider.Instance.shotMax)
-            {
-                player.SetActive(false);
-                CircleCollider.Instance.circle.SetActive(false);
-            }
-            else
-            {
-                if (!Hole.Instance.inHole)
-                {
-                    player.SetActive(true);
-                    CircleCollider.Instance.circle.SetActive(true);
-                }
-            }
+            player.SetActive(true);
+            CircleCollider.Instance.circle.SetActive(true);
         }
+    }
+
+    public void NotReady()
+    {
+        player.SetActive(false);
+        CircleCollider.Instance.circle.SetActive(false);
     }
 
     public void MouseDown()

@@ -21,15 +21,23 @@ public class Hole : MonoBehaviour
 
     private void Start()
     {
-        
+
     }
 
     private void Update()
     {
-        if (inHole == true)
+        if (inHole)
         {
             Line.Instance.ball.transform.position = Vector2.MoveTowards(Line.Instance.ball.transform.position, target.transform.position, smoothSpeed * Time.deltaTime);
+            Reticle.Instance.ready = false;
+
         }
+        else
+        {
+            //Reticle.Instance.ready = true;
+
+        }
+        //Debug.Log(Reticle.Instance.ready+" bouffon");
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -38,7 +46,7 @@ public class Hole : MonoBehaviour
         {
             //Debug.Log("triggers!");
             inHole = true;
-            Reticle.Instance.ready = false;
+//            Reticle.Instance.ready = false;
             Line.Instance.rb.velocity = velocity;
         }
     }
