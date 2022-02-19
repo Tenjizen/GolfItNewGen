@@ -1175,7 +1175,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106499828}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7105b9f9be5f01844a46792aba313c9e, type: 3}
   m_Name: 
@@ -1216,7 +1216,7 @@ MonoBehaviour:
   player: {fileID: 1825103182}
   radius: 5
   circle: {fileID: 1990067719}
-  shotMax: 20000
+  shotMax: 2
   countShot: 0
 --- !u!1 &1488054031 stripped
 GameObject:
