@@ -34,19 +34,15 @@ public class Hole : MonoBehaviour
         }
         else
         {
-            //Reticle.Instance.ready = true;
 
         }
-        //Debug.Log(Reticle.Instance.ready+" bouffon");
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.transform.tag == "Ball" && Line.Instance.rb.velocity.magnitude < maxSpeedForGoal)
         {
-            //Debug.Log("triggers!");
             inHole = true;
-//            Reticle.Instance.ready = false;
             Line.Instance.rb.velocity = velocity;
         }
     }

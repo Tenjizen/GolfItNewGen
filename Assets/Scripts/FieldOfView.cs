@@ -89,6 +89,7 @@ public class FieldOfView : MonoBehaviour
                     CircleCollider.Instance.restart = true;
                     collision = true;
                     Reticle.Instance.ready = false;
+                    StartCoroutine(Reticle.Instance.RestartLoadScene());
                 }
             }
             if (raycastHitPlayer2D.collider == null)
@@ -104,6 +105,7 @@ public class FieldOfView : MonoBehaviour
                     CircleCollider.Instance.restart = true;
                     collision = true;
                     Reticle.Instance.ready = false;
+                    StartCoroutine(Reticle.Instance.RestartLoadScene());
                 }
             }
 
