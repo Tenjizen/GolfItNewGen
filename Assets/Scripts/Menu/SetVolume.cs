@@ -9,12 +9,14 @@ public class SetVolume : MonoBehaviour
 
     private void Awake()
     {
-        //DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);if (start)
+        
     }
 
-    public void SetLevel (float sliderValue)
+    public void SetLevel(float sliderValue)
     {
-        mixer.SetFloat("MusicVolume",Mathf.Log10(sliderValue) *20);
+        
+        mixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
 
     }
 }
