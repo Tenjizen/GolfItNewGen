@@ -4,10 +4,10 @@ using UnityEngine;
 public class CircleCollider : MonoBehaviour
 {
     [SerializeField] private float MoveForce = 20f;
-    [SerializeField] private Rigidbody2D player; // get the player transform, or w/e object you want to limit in a circle
-    [SerializeField] private float radius = 10f; // this is the range you want the player to move without restriction
+    [SerializeField] private Rigidbody2D player;
+    [SerializeField] private float radius = 10f; 
 
-    public GameObject circle;  // this is a location that is set to the middle of my world, it will be the center of your circle.
+    public GameObject circle;  
     public int shotMax;
     public int countShot;
 
@@ -23,17 +23,14 @@ public class CircleCollider : MonoBehaviour
     }
     private void Start()
     {
-        //Reticle.Instance.ready = false;
         restart = false;
-        //StartCoroutine(ReadyTrue(1));
 
     }
 
     private void Update()
     {
         circle.transform.position = Line.Instance.ball.GetComponent<Transform>().position;
-        float dist = Vector3.Distance(player.transform.position, circle.transform.position); // the distance from player current position to the circleCenter
-
+        float dist = Vector3.Distance(player.transform.position, circle.transform.position); 
         if (dist > radius)
         {
             Vector3 fromOrigintoObject = player.transform.position - circle.transform.position;

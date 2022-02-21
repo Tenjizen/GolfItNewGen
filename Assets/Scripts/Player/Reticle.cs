@@ -7,10 +7,6 @@ public class Reticle : MonoBehaviour
     public bool IsSelected = false;
     public bool ready = true;
 
-
-
-
-
     public static Reticle Instance;
 
     private void Awake()
