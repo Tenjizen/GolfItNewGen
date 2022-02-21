@@ -6,7 +6,7 @@ public class MurCassable : MonoBehaviour
     public new Collider2D collider2D;
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.transform.tag == "Ball" && Line.Instance.rb.velocity.magnitude < 10)
+        if (col.transform.tag == "Ball" && Line.Instance.rb.velocity.magnitude < 20)
         {
             collider2D.isTrigger = false;
             Debug.Log("NOOOOOOOO DESTRUCTIONNNN!");

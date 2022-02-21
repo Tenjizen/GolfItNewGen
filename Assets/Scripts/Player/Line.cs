@@ -22,6 +22,7 @@ public class Line : MonoBehaviour
     {
         cam = Camera.main;
         Instance = this;
+
     }
     private void Start()
     {
@@ -87,4 +88,5 @@ public class Line : MonoBehaviour
             dir.EndLine();
         }
     }
+
 }

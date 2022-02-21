@@ -18,7 +18,7 @@ public class FieldOfView : MonoBehaviour
     private float startingAngle;
 
     private bool collision = false;
-    
+
 
     public static FieldOfView Instance;
 
@@ -65,6 +65,7 @@ public class FieldOfView : MonoBehaviour
             {
                 //no hit
                 vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDist;
+                //Debug.Log("no collider");
 
             }
             else
@@ -79,33 +80,32 @@ public class FieldOfView : MonoBehaviour
             if (raycastHitBall2D.collider == null)
             {
                 //no hit
-                vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDist;
             }
             else
             {
-                if (!CircleCollider.Instance.restart && !Reticle.Instance.ready)
+                if (raycastHitBall2D.collider.tag == "Ball" && !CircleCollider.Instance.restart)
                 {
-                    Debug.Log("a modif en restart in FieldOfView script " + raycastHitPlayer2D.collider);
+                    Debug.Log("collision ball ");
                     CircleCollider.Instance.restart = true;
                     collision = true;
                     Reticle.Instance.ready = false;
-                    StartCoroutine(Reticle.Instance.RestartLoadScene());
+                    StartCoroutine(Reticle.Instance.RestartLoadScene(5));
                 }
+
             }
             if (raycastHitPlayer2D.collider == null)
             {
-                //no hit
-                vertex = origin + UtilsClass.GetVectorFromAngle(angle) * viewDist;
+                //    //hit
             }
             else
             {
-                if (!CircleCollider.Instance.restart && !Reticle.Instance.ready)
+                if (!CircleCollider.Instance.restart && raycastHitPlayer2D.collider.tag == "Player")
                 {
-                    Debug.Log("a modif en restart in FieldOfView script " + raycastHitPlayer2D.collider);
+                    Debug.Log("collision player");
                     CircleCollider.Instance.restart = true;
                     collision = true;
                     Reticle.Instance.ready = false;
-                    StartCoroutine(Reticle.Instance.RestartLoadScene());
+                    StartCoroutine(Reticle.Instance.RestartLoadScene(5));
                 }
             }
 
@@ -132,7 +132,7 @@ public class FieldOfView : MonoBehaviour
         if (CircleCollider.Instance.restart && Line.Instance.rb.velocity.magnitude < 0.00001f && collision)
         {
             collision = false;
-            StartCoroutine(Reticle.Instance.RestartLoadScene());
+            StartCoroutine(Reticle.Instance.RestartLoadScene(5));
         }
 
     }

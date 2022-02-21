@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class CircleCollider : MonoBehaviour
@@ -22,7 +23,10 @@ public class CircleCollider : MonoBehaviour
     }
     private void Start()
     {
+        //Reticle.Instance.ready = false;
         restart = false;
+        //StartCoroutine(ReadyTrue(1));
+
     }
 
     private void Update()
@@ -48,5 +52,11 @@ public class CircleCollider : MonoBehaviour
         {
             player.AddForce(m_direction * MoveForce);
         }
+    }
+    public IEnumerator ReadyTrue(int n)
+    {
+        yield return new WaitForSeconds(n);
+        Reticle.Instance.ready = true;
+
     }
 }
