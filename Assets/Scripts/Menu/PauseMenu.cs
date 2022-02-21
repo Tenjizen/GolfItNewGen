@@ -26,6 +26,7 @@ public class PauseMenu : MonoBehaviour
             if (!pauseMenu.gameObject.activeInHierarchy)
             {
                 pauseMenu.SetActive(true);
+                Time.timeScale = 0;
                 if (settings.gameObject.activeInHierarchy || credits.gameObject.activeInHierarchy)
                     OnClickPauseMenu();
                 else if (keys.gameObject.activeInHierarchy)
@@ -33,8 +34,11 @@ public class PauseMenu : MonoBehaviour
                     OnClickBackSettings();
                 }
             }
-            else if(pauseMenu.gameObject.activeInHierarchy)
+            else if (pauseMenu.gameObject.activeInHierarchy)
+            {
                 pauseMenu.SetActive(false);
+                Time.timeScale = 1;
+            }
         }
 
     }
