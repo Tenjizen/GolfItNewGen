@@ -6,11 +6,11 @@ public class SetVolume : MonoBehaviour
 {
     public AudioMixer mixer;
 
-
+    float m_sliderValue = 0.3f;
     private void Awake()
     {
-        //DontDestroyOnLoad(this.gameObject);if (start)
-        
+        //DontDestroyOnLoad(this.gameObject);
+        SetLevel(m_sliderValue);
     }
 
     public void SetLevel(float sliderValue)
@@ -18,5 +18,7 @@ public class SetVolume : MonoBehaviour
         
         mixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
 
+        Debug.Log(sliderValue);
+        sliderValue = m_sliderValue;
     }
 }
