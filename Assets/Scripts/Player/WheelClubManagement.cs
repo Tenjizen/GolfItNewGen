@@ -46,23 +46,20 @@ public class WheelClubManagement : MonoBehaviour
             default:
                 break;
         }
-
+        selectedItem.sprite = icon.sprite;
+        itemText.text = itemName;
     }
 
 
     void Update()
     {
-        if (selected)
-        {
-            selectedItem.sprite = icon.sprite;
-            itemText.text = itemName;
-        }
+       
     }
 
     public void Selected() 
     {
-        selected = true;
 
+        selected = true;
     }
     public void DeSelected() 
     {
@@ -71,12 +68,12 @@ public class WheelClubManagement : MonoBehaviour
     }
 
 
-
-    public void HoverEnter()
+    private void OnMouseOver()
     {
-        itemText.text = itemName;
+        itemText.text = itemName;   
     }
-    public void HoverExit()
+
+    private void OnMouseExit()
     {
         itemText.text = "";
     }

@@ -80,6 +80,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void OnClickResume()
     {
+                Time.timeScale = 1;
         pauseMenu.SetActive(false);
     }
     public void OnClickRestart()
