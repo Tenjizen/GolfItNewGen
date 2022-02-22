@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class WheelClub : MonoBehaviour
 {
+    public enum PowerClub
+    {
+        Hybride = 1,
+        Putter = 2,
+        Driver = 3,
+        Wedge = 4,
+        Sandwitch = 5
+    }
+
 
     public Line line;
 
     [SerializeField] private PowerClub club;
 
 
-    [SerializeField] private Vector2 powerHybride;
-    [SerializeField] private Vector2 powerPutter;
-    [SerializeField] private Vector2 powerDriver;
-    [SerializeField] private Vector2 powerWedge;
-    [SerializeField] private Vector2 powerSandwitch;
+    public Vector2 powerHybride;
+    public Vector2 powerPutter;
+    public Vector2 powerDriver;
+    public Vector2 powerWedge;
+    public Vector2 powerSandwitch;
 
 
     public GameObject wheel;
@@ -22,7 +31,6 @@ public class WheelClub : MonoBehaviour
     void Start()
     {
         wheel.SetActive(false);
-
         //line.maxPower = powerDriver;
         //line.minPower = -powerDriver;
 
@@ -39,14 +47,7 @@ public class WheelClub : MonoBehaviour
 
     }
 
-    enum PowerClub
-    {
-        Hybride = 1,
-        Putter = 2,
-        Driver = 3,
-        Wedge = 4,
-        Sandwitch = 5
-    }
+
 
 
 }

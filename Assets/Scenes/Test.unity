@@ -534,7 +534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wheelClub: {fileID: 0}
   line: {fileID: 0}
-  ID: 3
+  PowerClub: 3
   itemName: ClubDeMouton
   itemText: {fileID: 1060657366}
   selectedItem: {fileID: 699502701}
@@ -829,7 +829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wheelClub: {fileID: 0}
   line: {fileID: 0}
-  ID: 5
+  PowerClub: 5
   itemName: ClubDeLitterature
   itemText: {fileID: 1060657366}
   selectedItem: {fileID: 699502701}
@@ -1562,7 +1562,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 247319083}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 247319086}
+        m_TargetAssemblyTypeName: WheelClubManagement, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &247319083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1690,9 +1702,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e84cce703617ae4fbc3f3b24d0e2854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelClub: {fileID: 0}
-  line: {fileID: 0}
-  ID: 1
+  wheelClub: {fileID: 1106499832}
+  line: {fileID: 2095817425}
+  PowerClub: 1
   itemName: ClubSandwitch
   itemText: {fileID: 1060657366}
   selectedItem: {fileID: 699502701}
@@ -1829,7 +1841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wheelClub: {fileID: 0}
   line: {fileID: 0}
-  ID: 2
+  PowerClub: 2
   itemName: ClubDeGolf
   itemText: {fileID: 1060657366}
   selectedItem: {fileID: 699502701}
@@ -5613,7 +5625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   line: {fileID: 2095817425}
   club: 1
-  powerHybride: {x: 0, y: 0}
+  powerHybride: {x: 6, y: 6}
   powerPutter: {x: 0, y: 0}
   powerDriver: {x: 1, y: 1}
   powerWedge: {x: 0, y: 0}
@@ -5960,7 +5972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wheelClub: {fileID: 0}
   line: {fileID: 0}
-  ID: 4
+  PowerClub: 4
   itemName: ClubDeSport
   itemText: {fileID: 1060657366}
   selectedItem: {fileID: 699502701}
