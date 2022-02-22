@@ -3,8 +3,8 @@ using UnityEngine;
 public class Line : MonoBehaviour
 {
     [SerializeField] private float power = 10f;
-    [SerializeField] private Vector2 minPower;
-    [SerializeField] private Vector2 maxPower;
+    public Vector2 minPower;
+    public Vector2 maxPower;
     [SerializeField] private Direction dir;
 
     public GameObject player;

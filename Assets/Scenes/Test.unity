@@ -532,11 +532,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e84cce703617ae4fbc3f3b24d0e2854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wheelClub: {fileID: 0}
+  line: {fileID: 0}
   ID: 3
   itemName: ClubDeMouton
   itemText: {fileID: 1060657366}
   selectedItem: {fileID: 699502701}
-  icon: {fileID: 21300000, guid: 5b5494bb62c86954ea8c1dbcfc3d5460, type: 3}
+  icon: {fileID: 934494548}
 --- !u!114 &82375971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,11 +827,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e84cce703617ae4fbc3f3b24d0e2854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wheelClub: {fileID: 0}
+  line: {fileID: 0}
   ID: 5
   itemName: ClubDeLitterature
   itemText: {fileID: 1060657366}
   selectedItem: {fileID: 699502701}
-  icon: {fileID: 21300000, guid: 670603bd50774b844a89abc494cede19, type: 3}
+  icon: {fileID: 356968837}
 --- !u!114 &166949684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1686,11 +1690,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e84cce703617ae4fbc3f3b24d0e2854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wheelClub: {fileID: 0}
+  line: {fileID: 0}
   ID: 1
-  itemName: ClubSandwitch?
+  itemName: ClubSandwitch
   itemText: {fileID: 1060657366}
   selectedItem: {fileID: 699502701}
-  icon: {fileID: 21300000, guid: f258518b0b50af84b885c23f156e6512, type: 3}
+  icon: {fileID: 1071565964}
 --- !u!1 &271917207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,11 +1827,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e84cce703617ae4fbc3f3b24d0e2854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wheelClub: {fileID: 0}
+  line: {fileID: 0}
   ID: 2
   itemName: ClubDeGolf
   itemText: {fileID: 1060657366}
   selectedItem: {fileID: 699502701}
-  icon: {fileID: 21300000, guid: 8902479850d92ee41a158f59eff28417, type: 3}
+  icon: {fileID: 1956804540}
 --- !u!114 &271917211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2099,7 +2107,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 670603bd50774b844a89abc494cede19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08d37d0b67134624da0bf74268a7c7b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3316,7 +3324,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3727dd58e1bd4234eaea9bc88dbc6154, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 843067d4ef28281438869e8c208f7bdf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4196,7 +4204,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5b5494bb62c86954ea8c1dbcfc3d5460, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8a56a0912bec6d4b868b17384a267e5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5237,7 +5245,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: ClubSandwitch
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5264,8 +5272,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5371,7 +5379,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f258518b0b50af84b885c23f156e6512, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52f93d29b8f415c4a8279195f8bc6ac0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5534,6 +5542,7 @@ GameObject:
   - component: {fileID: 1106499830}
   - component: {fileID: 1106499831}
   - component: {fileID: 1106499829}
+  - component: {fileID: 1106499832}
   m_Layer: 0
   m_Name: _Scripts
   m_TagString: Untagged
@@ -5590,6 +5599,26 @@ MonoBehaviour:
   shotMax: 2
   countShot: 0
   restart: 0
+--- !u!114 &1106499832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106499828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b0bd6f176ea654289d7aa4e103b9bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  line: {fileID: 2095817425}
+  club: 1
+  powerHybride: {x: 0, y: 0}
+  powerPutter: {x: 0, y: 0}
+  powerDriver: {x: 1, y: 1}
+  powerWedge: {x: 0, y: 0}
+  powerSandwitch: {x: 0, y: 0}
+  wheel: {fileID: 1615264027}
 --- !u!1 &1130261186
 GameObject:
   m_ObjectHideFlags: 0
@@ -5929,11 +5958,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e84cce703617ae4fbc3f3b24d0e2854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wheelClub: {fileID: 0}
+  line: {fileID: 0}
   ID: 4
   itemName: ClubDeSport
   itemText: {fileID: 1060657366}
   selectedItem: {fileID: 699502701}
-  icon: {fileID: 21300000, guid: 3727dd58e1bd4234eaea9bc88dbc6154, type: 3}
+  icon: {fileID: 734525538}
 --- !u!114 &1257087380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8479,7 +8510,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0034d2afd626d4744a62984f3808e0fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa9ade710f0a63d4a85d770e216d48d5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
