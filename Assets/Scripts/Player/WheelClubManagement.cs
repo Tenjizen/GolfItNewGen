@@ -8,18 +8,23 @@ public class WheelClubManagement : MonoBehaviour
     public Line line;
     public WheelClub.PowerClub PowerClub;
 
-
-    
     public string itemName;
     public TextMeshProUGUI itemText;
     public Image selectedItem;
-    private bool selected = false;
     public Image icon;
+    private void Start()
+    {
+        switch (PowerClub)
+        {
+            case WheelClub.PowerClub.Hybride:
+                selectedItem.sprite = icon.sprite;
+                itemText.text = itemName;
+                break;
+        }
+    }
 
-    
     public void OnClick()
     {
-        Debug.Log(PowerClub);
 
         switch (PowerClub)
         {
@@ -48,34 +53,6 @@ public class WheelClubManagement : MonoBehaviour
         }
         selectedItem.sprite = icon.sprite;
         itemText.text = itemName;
-    }
-
-
-    void Update()
-    {
-       
-    }
-
-    public void Selected() 
-    {
-
-        selected = true;
-    }
-    public void DeSelected() 
-    {
-        selected = false;
-
-    }
-
-
-    private void OnMouseOver()
-    {
-        itemText.text = itemName;   
-    }
-
-    private void OnMouseExit()
-    {
-        itemText.text = "";
     }
 }
 

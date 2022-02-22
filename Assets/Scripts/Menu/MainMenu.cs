@@ -7,11 +7,7 @@ public class MainMenu : MonoBehaviour
     public GameObject credits;
     public GameObject settings;
     public GameObject keys;
-
-
     public string SceneOne;
-
-
     private void Start()
     {
         mainMenu.SetActive(true);
@@ -30,7 +26,6 @@ public class MainMenu : MonoBehaviour
                 OnClickBackSettings();
             }
         }
-        
     }
 
     public void OnClickCredits()
@@ -71,9 +66,4 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneOne);
     }
-    
-
-
-
-
 }

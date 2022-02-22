@@ -9,10 +9,6 @@ public class PauseMenu : MonoBehaviour
     public GameObject credits;
     public GameObject settings;
     public GameObject keys;
-
-
-
-
     private void Start()
     {
         pauseMenu.SetActive(false);
@@ -41,7 +37,6 @@ public class PauseMenu : MonoBehaviour
                 Time.timeScale = 1;
             }
         }
-
     }
 
     public void OnClickCredits()
@@ -80,12 +75,12 @@ public class PauseMenu : MonoBehaviour
     }
     public void OnClickResume()
     {
-                Time.timeScale = 1;
+        Time.timeScale = 1;
         pauseMenu.SetActive(false);
     }
     public void OnClickRestart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                Time.timeScale = 1;
+        Time.timeScale = 1;
     }
 }

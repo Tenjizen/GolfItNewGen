@@ -26,7 +26,6 @@ public class CircleCollider : MonoBehaviour
         restart = false;
 
     }
-
     private void Update()
     {
         circle.transform.position = Line.Instance.ball.GetComponent<Transform>().position;
@@ -54,6 +53,5 @@ public class CircleCollider : MonoBehaviour
     {
         yield return new WaitForSeconds(n);
         Reticle.Instance.ready = true;
-
     }
 }
