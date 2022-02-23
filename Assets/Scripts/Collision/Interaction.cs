@@ -8,15 +8,19 @@ public class Interaction : MonoBehaviour
     [SerializeField] private SpriteRenderer ButtonImage;
     [SerializeField] private Sprite spriteButton;
     [SerializeField] private Sprite spriteButtonUsed;
-    [SerializeField] private GameObject Porte;
-    [SerializeField] private float smoothSpeed;
-    [SerializeField] private int moveDoor;
+ 
+    [SerializeField] private BoxCollider2D Porte;
+    [SerializeField] private SpriteRenderer PorteImage;
+    [SerializeField] private Sprite spritePorte;
+    [SerializeField] private Sprite spritePorteOpen;
+    [SerializeField] private SpriteRenderer PorteImageBis;
+    [SerializeField] private Sprite spritePorteBis;
+    [SerializeField] private Sprite spritePorteOpenBis;
 
     private bool ButtonTrigger = false;
     private bool ButtonUsed = false;
 
     public static Interaction Instance;
-    private Vector2 newPosition;
 
     private void Awake()
     {
@@ -26,6 +30,8 @@ public class Interaction : MonoBehaviour
     private void Start()
     {
         ButtonImage.sprite = spriteButton;
+        PorteImage.sprite = spritePorte;
+        PorteImageBis.sprite = spritePorteBis;
     }
 
     private void Update()
@@ -36,8 +42,6 @@ public class Interaction : MonoBehaviour
             Debug.Log("Button pressed");
             ButtonUsed = true;
             ButtonImage.sprite = spriteButtonUsed;
-            newPosition = Porte.transform.position;
-            newPosition.y = newPosition.y + moveDoor;
         }
         else if (ButtonTrigger && ButtonUsed && Input.GetKeyDown(KeyCode.E))
         {
@@ -47,7 +51,10 @@ public class Interaction : MonoBehaviour
 
         if (ButtonUsed)
         {
-            Porte.transform.position = Vector2.MoveTowards(Porte.transform.position, newPosition, smoothSpeed * Time.deltaTime);
+            PorteImage.sprite = spritePorteOpen;
+            PorteImageBis.sprite = spritePorteOpenBis;
+            Porte.enabled = false;
+
         }
 
     }
