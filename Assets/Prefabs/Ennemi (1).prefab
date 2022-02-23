@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnnemiImage: {fileID: 2880209356932125156}
-  spriteEnnemi: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  spriteEnnemi: {fileID: 21300000, guid: bdbce53e18218c24ea366fbb20dda062, type: 3}
   spriteEnnemiDied: {fileID: 21300000, guid: e1bb81da1b8641742b047f21ce555731, type: 3}
   aimDirection: {x: 1.18, y: -1, z: 0}
   viewDist: 30
@@ -93,7 +93,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: bdbce53e18218c24ea366fbb20dda062, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,5 +118,5 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.13, y: 0.17}
+  m_Size: {x: 1.3924516, y: 1.4295068}
   m_Direction: 0
