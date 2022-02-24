@@ -100,6 +100,7 @@ public class Line : MonoBehaviour
 
                 rb.AddForce(force * power, ForceMode2D.Impulse);
                 dir.EndLine();
+        CircleCollider.Instance.countShot++;
             }
         }
     }
