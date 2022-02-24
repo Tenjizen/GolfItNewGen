@@ -6292,7 +6292,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7915,10 +7915,10 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 35be6ceb19723a94bb589543473e54a8, type: 3}
   - m_RefCount: 54
     m_Data: {fileID: 21300000, guid: b68d9e348a5d3bf40a91f95c03b87eaf, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 02f91d144496dd04daa9d35723b472cf, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 02f91d144496dd04daa9d35723b472cf, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 329
     m_Data:
@@ -16865,6 +16865,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1515218654}
   - component: {fileID: 1515218655}
+  - component: {fileID: 1515218657}
+  - component: {fileID: 1515218656}
   m_Layer: 0
   m_Name: Stone
   m_TagString: Untagged
@@ -16937,6 +16939,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1515218656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515218653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5191a2b140632e5459c2a3d04b613f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider2D: {fileID: 0}
+--- !u!61 &1515218657
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515218653}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.16755772}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.1, y: 5.54}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.1, y: 5.2048845}
+  m_EdgeRadius: 0
 --- !u!1 &1519016758
 GameObject:
   m_ObjectHideFlags: 0
