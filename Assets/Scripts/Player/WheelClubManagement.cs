@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class WheelClubManagement : MonoBehaviour
 {
     public WheelClub wheelClub;
@@ -13,8 +13,19 @@ public class WheelClubManagement : MonoBehaviour
     public Image selectedItem;
     public Image icon;
 
-    public bool jpp;
+    public string myFirstScene, mySecondScene, myThirdScene;
 
+    public Button button;
+    public Image imageLocked;
+    [SerializeField] private Sprite locked;
+
+    private bool unlockedDriver = false;
+    private bool unlockedPutter = false;
+    private bool unlockedWedge = false;
+    private bool unlockedSanwitch = false;
+
+    public int toCollect = 0;
+    [SerializeField] private int isUnlocked;
 
     public static WheelClubManagement Instance;
 
@@ -31,6 +42,110 @@ public class WheelClubManagement : MonoBehaviour
                 selectedItem.sprite = icon.sprite;
                 itemText.text = itemName;
                 break;
+            case WheelClub.PowerClub.Putter:
+                if (!unlockedPutter)
+                {
+                    imageLocked.sprite = locked;
+                }
+                break;
+            case WheelClub.PowerClub.Driver:
+                if (!unlockedDriver)
+                {
+                    imageLocked.sprite = locked;
+                }
+                break;
+            case WheelClub.PowerClub.Wedge:
+                if (!unlockedWedge)
+                {
+                    imageLocked.sprite = locked;
+                }
+                break;
+            case WheelClub.PowerClub.Sandwitch:
+                if (!unlockedSanwitch)
+                {
+                    imageLocked.sprite = locked;
+                }
+                break;
+            default:
+                break;
+        }
+    }
+    private void Update()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == myFirstScene)
+        {
+            unlockedDriver = true;
+        }
+
+        else if (scene.name == mySecondScene)
+        {
+            unlockedPutter = true;
+        }
+        else if (scene.name == myThirdScene)
+        {
+            unlockedWedge = true;
+        }
+        if (toCollect >= isUnlocked)
+            unlockedSanwitch = true;
+
+        switch (PowerClub)
+        {
+            case WheelClub.PowerClub.Putter:
+                if (!unlockedPutter)
+                {
+                    button.enabled = false;
+                    //button.image.enabled = false;
+                    imageLocked.sprite = locked;
+                }
+                else
+                {
+                    button.enabled = true;
+                    imageLocked.enabled = false;
+                }
+                break;
+            case WheelClub.PowerClub.Driver:
+                if (!unlockedDriver)
+                {
+                    //button.image.enabled = false;
+                    button.enabled = false;
+                    imageLocked.sprite = locked;
+                }
+                else
+                {
+                    button.enabled = true;
+                    imageLocked.enabled = false;
+                }
+                break;
+            case WheelClub.PowerClub.Wedge:
+                if (!unlockedWedge)
+                {
+                    //button.image.enabled = false;
+                    button.enabled = false;
+
+                    imageLocked.sprite = locked;
+                }
+                else
+                {
+                    button.enabled = true;
+                    imageLocked.enabled = false;
+                }
+                break;
+            case WheelClub.PowerClub.Sandwitch:
+                if (!unlockedSanwitch)
+                {
+                    button.enabled = false;
+                    //button.image.enabled = false;
+                    imageLocked.sprite = locked;
+                }
+                else
+                {
+                    button.enabled = true;
+                    imageLocked.enabled = false;
+                }
+                break;
+            default:
+                break;
         }
     }
 
@@ -42,51 +157,40 @@ public class WheelClubManagement : MonoBehaviour
             case WheelClub.PowerClub.Hybride:
                 line.minPower = -wheelClub.powerHybride;
                 line.maxPower = wheelClub.powerHybride;
-                //Hybride = true;
-                //Putter = false;
-                //Driver = false;
-                //Wedge = false;
-                //Sandwitch = false;
                 wheelClub.Driver = false;
                 break;
             case WheelClub.PowerClub.Putter:
-                line.minPower = -wheelClub.powerPutter;
-                line.maxPower = wheelClub.powerPutter;
-                //Putter = true;
-                //Hybride = false;
-                //Driver = false;
-                //Wedge = false;
-                wheelClub.Driver = false;
-                //Sandwitch = false;
+                if (unlockedPutter)
+                {
+                    line.minPower = -wheelClub.powerPutter;
+                    line.maxPower = wheelClub.powerPutter;
+                    wheelClub.Driver = false;
+                }
                 break;
             case WheelClub.PowerClub.Driver:
-                line.minPower = -wheelClub.powerDriver;
-                line.maxPower = wheelClub.powerDriver;
-                wheelClub.Driver = true;
-                //Hybride = false;
-                //Putter = false;
-                //Wedge = false;
-                //Sandwitch = false;
+                if (unlockedDriver)
+                {
+                    line.minPower = -wheelClub.powerDriver;
+                    line.maxPower = wheelClub.powerDriver;
+                    wheelClub.Driver = true;
+                }
                 break;
             case WheelClub.PowerClub.Wedge:
-                line.minPower = -wheelClub.powerWedge;
-                line.maxPower = wheelClub.powerWedge;
-                //Wedge = true;
-                wheelClub.Driver = false;
-                //Hybride = false;
-                //Putter = false;
-                //Driver = false;
-                //Sandwitch = false;
+                if (unlockedWedge)
+                {
+                    line.minPower = -wheelClub.powerWedge;
+                    line.maxPower = wheelClub.powerWedge;
+                    wheelClub.Driver = false;
+                }
                 break;
             case WheelClub.PowerClub.Sandwitch:
-                line.minPower = -wheelClub.powerSandwitch;
-                line.minPower = wheelClub.powerSandwitch;
-                //Sandwitch = true; 
-                //Hybride = false;
-                wheelClub.Driver = false;
-                //Putter = false;
-                //Driver = false;
-                //Wedge = false;
+                if (unlockedSanwitch)
+                {
+                    Debug.Log("unloock askip");
+                    line.minPower = -wheelClub.powerSandwitch;
+                    line.minPower = wheelClub.powerSandwitch;
+                    wheelClub.Driver = false;
+                }
                 break;
             default:
                 break;
