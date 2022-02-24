@@ -7,5 +7,7 @@ public class BonusShot : MonoBehaviour
     private void OnDestroy()
     {
         CircleCollider.Instance.shotMax++;
+
+        clamerde.Instance.bonus.enabled = true;
     }
 }
