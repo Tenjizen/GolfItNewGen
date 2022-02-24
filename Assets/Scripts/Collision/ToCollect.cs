@@ -6,16 +6,17 @@ public class ToCollect: MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.transform.tag == "Player")
+        if (col.transform.tag == "Player"|| col.transform.tag == "Ball")
         {
-            Debug.Log("triggers player!");
+            Debug.Log(col.transform.tag);
             Destroy(this.gameObject);
+            WheelClubManagement.Instance.toCollect++;
         }
-        if (col.transform.tag == "Ball")
-        {
-            Debug.Log("triggers ball!");
-            Destroy(this.gameObject);
-        }
+        //if (col.transform.tag == "Ball")
+        //{
+        //    Debug.Log("triggers ball!");
+        //    Destroy(this.gameObject);
+        //}
     }
 
 }
