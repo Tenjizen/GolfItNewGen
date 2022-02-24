@@ -9,13 +9,18 @@ public class Direction : MonoBehaviour
 
     private void Awake()
     {
-        ballPos = transform.position;
         lr = GetComponent<LineRenderer>();
     }
 
+
+    private void Update()
+    {
+        
+        ballPos = transform.position;
+    }
     public void RenderLine(Vector3 startMousePos, Vector3 endMousePos)
     {
-        //startMousePos
+        startMousePos = ballPos;
         lr.positionCount = 2;
         Vector3[] points = new Vector3[2];
         points[0] = startMousePos;
