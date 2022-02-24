@@ -18,22 +18,7 @@ public class Reticle : MonoBehaviour
         CircleCollider.Instance.countShot = 0;
     }
 
-    public void Selected(GameObject selected)
-    {
-        if (Line.Instance.rb.velocity.magnitude < 0.1f && ready)
-        {
-            //IsSelected = true;
-        }
-    }
-    public void Deselect()
-    {
-        if (Line.Instance.rb.velocity.magnitude < 0.0001f && ready)
-        {
-            //IsSelected = false;
-            //Line.Instance.MouseUp();
-            CircleCollider.Instance.countShot++;
-        }
-    }
+ 
     private void Update()
     {
         if (!CircleCollider.Instance.restart && CircleCollider.Instance.countShot >= CircleCollider.Instance.shotMax)

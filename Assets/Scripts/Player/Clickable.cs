@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class Clickable : MonoBehaviour
 {
@@ -21,3 +21,4 @@ public class Clickable : MonoBehaviour
         reticleManager.Deselect();
     }
 }
+*/

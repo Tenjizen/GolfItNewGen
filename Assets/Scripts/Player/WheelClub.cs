@@ -50,15 +50,15 @@ public class WheelClub : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             wheel.SetActive(!wheel.activeSelf);
-            if (Time.timeScale == 0)
+            if (wheel.activeInHierarchy)
             {
-                Reticle.Instance.ready = true;
-                Time.timeScale = 1;
+                Reticle.Instance.ready = false;
+                Time.timeScale = 0;
             }
             else
             {
-                Time.timeScale = 0;
-                Reticle.Instance.ready = false;
+                Time.timeScale = 1;
+                Reticle.Instance.ready = true;
             }
         }
     }

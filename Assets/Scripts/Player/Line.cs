@@ -39,13 +39,13 @@ public class Line : MonoBehaviour
         {
             MouseUpMouseDown();
         }
-       
 
-        if (rb.velocity.magnitude > 0.4f)
+
+        if (rb.velocity.magnitude > 0.4f || WheelClub.Instance.wheel.activeInHierarchy)
         {
             Reticle.Instance.ready = false;
         }
-        else if (rb.velocity.magnitude < 0.4f && !Hole.Instance.inHole && !CircleCollider.Instance.restart)
+        else if (rb.velocity.magnitude < 0.4f && !Hole.Instance.inHole && !CircleCollider.Instance.restart && !WheelClub.Instance.wheel.activeInHierarchy)
             Reticle.Instance.ready = true;
 
         if (!Reticle.Instance.ready)
@@ -100,10 +100,10 @@ public class Line : MonoBehaviour
 
                 rb.AddForce(force * power, ForceMode2D.Impulse);
                 dir.EndLine();
-        CircleCollider.Instance.countShot++;
+                CircleCollider.Instance.countShot++;
             }
         }
     }
 
 
-    }
+}

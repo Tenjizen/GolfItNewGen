@@ -10551,7 +10551,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2095817423}
   - component: {fileID: 2095817425}
-  - component: {fileID: 2095817424}
   - component: {fileID: 2095817427}
   - component: {fileID: 2095817422}
   - component: {fileID: 2095817421}
@@ -10667,19 +10666,6 @@ Transform:
   m_Father: {fileID: 732843208}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2095817424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095817419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82ff826f7d6a00e468a9275606c38eec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reticleManager: {fileID: 1041173106}
 --- !u!114 &2095817425
 MonoBehaviour:
   m_ObjectHideFlags: 0
