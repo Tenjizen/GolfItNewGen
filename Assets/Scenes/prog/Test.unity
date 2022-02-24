@@ -9802,12 +9802,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095817419}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ec8378b6dafa664d938936f48b06e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lr: {fileID: 0}
+  ball: {fileID: 2095817419}
 --- !u!114 &2095817428
 MonoBehaviour:
   m_ObjectHideFlags: 0

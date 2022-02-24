@@ -16,7 +16,7 @@ public class Direction : MonoBehaviour
     private void Update()
     {
         
-        ballPos = transform.position;
+        ballPos = ball.transform.position;
     }
     public void RenderLine(Vector3 startMousePos, Vector3 endMousePos)
     {
