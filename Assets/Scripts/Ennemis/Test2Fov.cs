@@ -8,8 +8,8 @@ public class Test2Fov : MonoBehaviour
     public float viewRad;
     public float viewAngle;
 
-    public  LayerMask obstacleMask;
-    public  LayerMask playerMask;
+    public LayerMask obstacleMask;
+    public LayerMask playerMask;
 
     public float Aim;
 
@@ -31,10 +31,12 @@ public class Test2Fov : MonoBehaviour
 
         //if (visiblePlayer[] == none)
         //    Debug.Log("see you");
-        if (started) {
+        if (started)
+        {
             transform.Rotate(0, 0, Aim);
             started = false;
-        } }
+        }
+    }
 
     private void FindVisiblePlayer()
     {
@@ -46,16 +48,17 @@ public class Test2Fov : MonoBehaviour
             Transform player = playerInRadius[i].transform;
             Vector2 dirPlayer = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
 
-            if (Vector2.Angle(dirPlayer, transform.right)< viewAngle/2)
+            if (Vector2.Angle(dirPlayer, transform.right) < viewAngle / 2)
             {
 
                 float disancePlayer = Vector2.Distance(transform.position, player.position);
 
-                if(!Physics2D.Raycast(transform.position, dirPlayer, disancePlayer, obstacleMask))
+                if (!Physics2D.Raycast(transform.position, dirPlayer, disancePlayer, obstacleMask))
                 {
-                    visiblePlayer.Add(player);
-            Debug.Log("see you");
-                }
+                    if (Physics2D.Raycast(transform.position, dirPlayer, disancePlayer, playerMask))
+                        { visiblePlayer.Add(player);
+                        Debug.Log("see you");
+                    } }
 
             }
 
