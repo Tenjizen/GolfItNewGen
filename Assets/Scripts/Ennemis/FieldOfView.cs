@@ -61,6 +61,10 @@ public class FieldOfView : MonoBehaviour
         {
             Vector3 vertex; //= origin + UtilsClass.GetVectorFromAngle(angle) * viewDist; 
             RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDist, layerMask);
+            //RaycastHit2D raycastHitBall2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDist);
+
+            //RaycastHit2D raycastHitPlayer2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDist, playerMask);
+
             if (raycastHit2D.collider == null)
             {
                 //no hit
@@ -72,27 +76,25 @@ public class FieldOfView : MonoBehaviour
             {
                 //Hit object
                 vertex = raycastHit2D.point;
-                //Debug.Log("Salut je test " + viewDist);
             }
-            //RaycastHit2D raycastHitPlayer2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDist, playerMask);
-            //RaycastHit2D raycastHitBall2D = Physics2D.Raycast(origin, UtilsClass.GetVectorFromAngle(angle), viewDist, BallMask);
+//            if (raycastHitBall2D.collider == null)
+//            {
 
-            //if (raycastHitBall2D.collider == null)
-            //{
-            //    //no hit
-            //}
-            //else
-            //{
-            //    if (raycastHitBall2D.collider.tag == "Ball" && !CircleCollider.Instance.restart)
-            //    {
-            //        Debug.Log("collision ball ");
-            //        vertex = raycastHit2D.point;
-            //        CircleCollider.Instance.restart = true;
-            //        collision = true;
-            //        Reticle.Instance.ready = false;
-            //        StartCoroutine(Reticle.Instance.RestartLoadScene(5));
-            //    }
-                
+////                Debug.Log("Salut je test " + viewDist);
+//                vertex = raycastHit2D.point;
+//                    //Debug.Log("collision ball ");
+//            }
+//            else
+//            {
+//                //if (raycastHitBall2D.collider.tag == "Ball" && !CircleCollider.Instance.restart)
+//                //{
+//  //                  Debug.Log("collision ball ");
+//            //        //CircleCollider.Instance.restart = true;
+//            //        //collision = true;
+//            //        //Reticle.Instance.ready = false;
+//            //        //StartCoroutine(Reticle.Instance.RestartLoadScene(5));
+//            //}
+//            }
             //}
             //if (raycastHitPlayer2D.collider == null)
             //{

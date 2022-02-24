@@ -15,6 +15,10 @@ public class EnnemiFOV : MonoBehaviour
     public Transform ParentFoV;
     public float fov = 90f;
 
+    public Player player;
+
+    //public GameObject player;
+
     private FieldOfView fieldOfView;
     private bool flipFOV = true;
 
@@ -48,7 +52,7 @@ public class EnnemiFOV : MonoBehaviour
             flipFOV = false;
             StartCoroutine(RandomAimDir());
         }
-
+        //FindTarget();
 
         if (ContactWithEnnemy && Input.GetKeyDown(KeyCode.E)
     )
@@ -62,7 +66,23 @@ public class EnnemiFOV : MonoBehaviour
 
     }
 
+    private void FindTarget()
+    {
+        if (Vector3.Distance(transform.position, player.transform.position) < viewDist)
+        {
 
+            Vector3 dirToPlayer = (player.transform.position - transform.position);
+            if (Vector3.Angle(aimDirection, dirToPlayer) < fov / 2)
+            {
+                RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, Vector2.down, viewDist);
+                if (raycastHit2D.collider != null)
+                {
+                    if (raycastHit2D.collider.gameObject.GetComponent<Player>() != null)
+                        Debug.Log("nik Parnas");
+                }
+            }
+        }
+    }
 
 
 
