@@ -30,7 +30,7 @@ public class Test2Fov : MonoBehaviour
     {
         started = true;
         flip = true;
-       //fliped = true;
+        //fliped = true;
 
         if (fliped)
         {
@@ -85,6 +85,7 @@ public class Test2Fov : MonoBehaviour
                     if (Physics2D.Raycast(transform.position, dirPlayer, disancePlayer, playerMask))
                     {
                         visiblePlayer.Add(player);
+                        StartCoroutine(Reticle.Instance.RestartLoadScene(5));
                         Debug.Log("see you");
                     }
                 }

@@ -36,39 +36,7 @@ public class WheelClubManagement : MonoBehaviour
 
     private void Start()
     {
-        switch (PowerClub)
-        {
-            case WheelClub.PowerClub.Hybride:
-                selectedItem.sprite = icon.sprite;
-                itemText.text = itemName;
-                break;
-            case WheelClub.PowerClub.Putter:
-                if (!unlockedPutter)
-                {
-                    imageLocked.sprite = locked;
-                }
-                break;
-            case WheelClub.PowerClub.Driver:
-                if (!unlockedDriver)
-                {
-                    imageLocked.sprite = locked;
-                }
-                break;
-            case WheelClub.PowerClub.Wedge:
-                if (!unlockedWedge)
-                {
-                    imageLocked.sprite = locked;
-                }
-                break;
-            case WheelClub.PowerClub.Sandwitch:
-                if (!unlockedSanwitch)
-                {
-                    imageLocked.sprite = locked;
-                }
-                break;
-            default:
-                break;
-        }
+        
     }
     private void Update()
     {
@@ -148,7 +116,14 @@ public class WheelClubManagement : MonoBehaviour
                 break;
         }
     }
+    public void Init()
+    {
+        line.minPower = -wheelClub.powerHybride;
+        line.maxPower = wheelClub.powerHybride;
 
+        selectedItem.sprite = clamerde.Instance.club.sprite;
+        itemText.text = "Ouai";
+    }
     public void OnClick()
     {
 
