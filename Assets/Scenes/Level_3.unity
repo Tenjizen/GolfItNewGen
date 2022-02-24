@@ -2508,7 +2508,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41585c62ad4b831488cd16d5efc7fefe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsSelected: 0
   ready: 1
 --- !u!1 &313690015
 GameObject:
@@ -10906,7 +10905,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lr: {fileID: 0}
-  ball: {fileID: 1454560591}
 --- !u!114 &1454560598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10932,13 +10930,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c48a7fef4737444b55e158fcc8995c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 10
+  power: 50
   minPower: {x: -4, y: -4}
   maxPower: {x: 4, y: 4}
   dir: {fileID: 1454560597}
   player: {fileID: 660596725}
   rb: {fileID: 1454560594}
   ball: {fileID: 1454560591}
+  lr: {fileID: 0}
 --- !u!1 &1457500401
 GameObject:
   m_ObjectHideFlags: 0
