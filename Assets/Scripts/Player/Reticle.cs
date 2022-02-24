@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class Reticle : MonoBehaviour
 {
-    public bool IsSelected = false;
     public bool ready = true;
 
     public static Reticle Instance;
@@ -23,15 +22,15 @@ public class Reticle : MonoBehaviour
     {
         if (Line.Instance.rb.velocity.magnitude < 0.1f && ready)
         {
-            IsSelected = true;
+            //IsSelected = true;
         }
     }
     public void Deselect()
     {
         if (Line.Instance.rb.velocity.magnitude < 0.0001f && ready)
         {
-            IsSelected = false;
-            Line.Instance.MouseUp();
+            //IsSelected = false;
+            //Line.Instance.MouseUp();
             CircleCollider.Instance.countShot++;
         }
     }

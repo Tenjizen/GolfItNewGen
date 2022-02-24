@@ -4,8 +4,6 @@ public class Direction : MonoBehaviour
 {
     [SerializeField] private LineRenderer lr;
 
-    public GameObject ball;
-    private Vector3 ballPos;
 
     private void Awake()
     {
@@ -15,12 +13,9 @@ public class Direction : MonoBehaviour
 
     private void Update()
     {
-        
-        ballPos = ball.transform.position;
     }
     public void RenderLine(Vector3 startMousePos, Vector3 endMousePos)
     {
-        startMousePos = ballPos;
         lr.positionCount = 2;
         Vector3[] points = new Vector3[2];
         points[0] = startMousePos;

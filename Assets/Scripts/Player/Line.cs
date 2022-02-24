@@ -18,6 +18,9 @@ public class Line : MonoBehaviour
 
     public static Line Instance;
 
+
+    [SerializeField] private LineRenderer lr;
+
     private void Awake()
     {
         cam = Camera.main;
@@ -26,18 +29,62 @@ public class Line : MonoBehaviour
     }
     private void Start()
     {
+        //lr = GetComponent<LineRenderer>();
         dir = GetComponent<Direction>();
     }
 
     private void Update()
     {
-        if (Reticle.Instance.IsSelected == true)
-            MouseDown();
-        if (rb.velocity.magnitude > 0.01f)
+        //if (Line.Instance.rb.velocity.magnitude < 0.5f && Reticle.Instance.ready)
+        //{
+        //    if (Input.GetMouseButtonDown(0))
+        //    {
+        //        startMousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        //        startMousePos.z = 15;
+        //        Debug.Log(startMousePos);
+        //    }
+        //    if (Input.GetMouseButton(0))
+        //    {
+        //        Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
+        //        currentPoint.z = 15;
+        //        dir.RenderLine(startMousePos, currentPoint);
+        //    }
+        //}
+
+
+        //if (Line.Instance.rb.velocity.magnitude < 0.402f && Reticle.Instance.ready)
+        //{
+        //    if (Input.GetMouseButtonUp(0))
+        //    {
+
+
+        //        endMousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        //        endMousePos.z = 15;
+        //        Debug.Log(endMousePos);
+
+        //        Vector2 dist = (startMousePos - endMousePos).normalized;
+
+        //        force = new Vector2(
+        //            Mathf.Clamp(dist.x, minPower.x, maxPower.x),
+        //            Mathf.Clamp(dist.y, minPower.y, maxPower.y)
+        //            );
+
+        //        rb.AddForce(force * power, ForceMode2D.Impulse);
+        //        dir.EndLine();
+        //    }
+        //    CircleCollider.Instance.countShot++;
+        //}
+        if (Line.Instance.rb.velocity.magnitude < 0.5f && Reticle.Instance.ready)
+        {
+            MouseUpMouseDown();
+        }
+       
+
+        if (rb.velocity.magnitude > 0.4f)
         {
             Reticle.Instance.ready = false;
         }
-        else if(rb.velocity.magnitude < 0.01f && !Hole.Instance.inHole && !CircleCollider.Instance.restart)
+        else if (rb.velocity.magnitude < 0.4f && !Hole.Instance.inHole && !CircleCollider.Instance.restart)
             Reticle.Instance.ready = true;
 
         if (!Reticle.Instance.ready)
@@ -57,35 +104,73 @@ public class Line : MonoBehaviour
         CircleCollider.Instance.circle.SetActive(false);
     }
 
-    public void MouseDown()
+
+
+    public void MouseUpMouseDown()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Reticle.Instance.ready == true)
         {
-            startMousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-            startMousePos = ball.transform.position;
-            startMousePos.z = 15;
-        }
-        if (Input.GetMouseButton(0))
-        {
-            Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
-            currentPoint.z = 15;
-            dir.RenderLine(startMousePos, currentPoint);
+            if (Input.GetMouseButtonDown(0))
+            {
+                startMousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+                startMousePos.z = 15;
+                Debug.Log(startMousePos);
+            }
+            if (Input.GetMouseButton(0))
+            {
+                Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
+                currentPoint.z = 15;
+                dir.RenderLine(startMousePos, currentPoint);
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+
+
+                endMousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+                endMousePos.z = 15;
+                Debug.Log(endMousePos);
+
+                Vector2 dist = (startMousePos - endMousePos).normalized;
+
+                force = new Vector2(
+                    Mathf.Clamp(dist.x, minPower.x, maxPower.x),
+                    Mathf.Clamp(dist.y, minPower.y, maxPower.y)
+                    );
+
+                rb.AddForce(force * power, ForceMode2D.Impulse);
+                dir.EndLine();
+            }
         }
     }
-    public void MouseUp()
-    {
-        if (Input.GetMouseButtonUp(0))
-        {
-            endMousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-            endMousePos.z = 15;
 
-            force = new Vector2(Mathf.Clamp(
-                startMousePos.x - endMousePos.x, minPower.x, maxPower.x),
-                Mathf.Clamp(startMousePos.y - endMousePos.y, minPower.y, maxPower.y)
-                );
-            rb.AddForce(force * power, ForceMode2D.Impulse);
-            dir.EndLine();
-        }
+        //public void MouseDown()
+        //{
+        //    if (Input.GetMouseButtonDown(0))
+        //    {
+        //        startMousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        //        startMousePos.z = 15;
+        //    }
+        //    if (Input.GetMouseButtonUp(0))
+        //    {
+        //        Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
+        //        currentPoint.z = 15;
+        //        dir.RenderLine(startMousePos, currentPoint);
+        //    }
+        //}
+        //public void MouseUp()
+        //{
+        //    if (Input.GetMouseButtonUp(0))
+        //    {
+        //        endMousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        //        endMousePos.z = 15;
+
+        //        force = new Vector2(
+        //            Mathf.Clamp(startMousePos.x - endMousePos.x, minPower.x, maxPower.x),
+        //            Mathf.Clamp(startMousePos.y - endMousePos.y, minPower.y, maxPower.y)
+        //            );
+        //        rb.AddForce(force * power, ForceMode2D.Impulse);
+        //        dir.EndLine();
+        //    }
+        //}
+
     }
-
-}
