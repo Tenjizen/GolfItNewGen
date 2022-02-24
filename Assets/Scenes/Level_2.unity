@@ -3310,8 +3310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e84cce703617ae4fbc3f3b24d0e2854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelClub: {fileID: 0}
-  line: {fileID: 0}
+  wheelClub: {fileID: 451013711}
+  line: {fileID: 1011947369}
   PowerClub: 3
   itemName: Driver
   itemText: {fileID: 844999115}
@@ -6170,7 +6170,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011947368}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ec8378b6dafa664d938936f48b06e69, type: 3}
   m_Name: 
@@ -8340,8 +8340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e84cce703617ae4fbc3f3b24d0e2854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelClub: {fileID: 0}
-  line: {fileID: 0}
+  wheelClub: {fileID: 451013711}
+  line: {fileID: 1011947369}
   PowerClub: 4
   itemName: Wedge
   itemText: {fileID: 844999115}
@@ -8918,10 +8918,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e84cce703617ae4fbc3f3b24d0e2854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelClub: {fileID: 0}
-  line: {fileID: 0}
+  wheelClub: {fileID: 451013711}
+  line: {fileID: 1011947369}
   PowerClub: 5
-  itemName: Sandwitch
+  itemName: Sandwich
   itemText: {fileID: 844999115}
   selectedItem: {fileID: 1292894334}
   icon: {fileID: 439238264}
@@ -9884,8 +9884,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e84cce703617ae4fbc3f3b24d0e2854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelClub: {fileID: 0}
-  line: {fileID: 0}
+  wheelClub: {fileID: 451013711}
+  line: {fileID: 1011947369}
   PowerClub: 1
   itemName: Hybride
   itemText: {fileID: 844999115}
@@ -12595,8 +12595,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e84cce703617ae4fbc3f3b24d0e2854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelClub: {fileID: 0}
-  line: {fileID: 0}
+  wheelClub: {fileID: 451013711}
+  line: {fileID: 1011947369}
   PowerClub: 2
   itemName: Putter
   itemText: {fileID: 844999115}
