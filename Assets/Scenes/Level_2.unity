@@ -6176,7 +6176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lr: {fileID: 0}
-  ball: {fileID: 0}
+  ball: {fileID: 1011947368}
 --- !u!120 &1011947373
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -8258,7 +8258,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15.52655
+  orthographic size: 25.929688
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
