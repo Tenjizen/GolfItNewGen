@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WheelClub : MonoBehaviour
 {
+
+
     public enum PowerClub
     {
         Hybride = 1,
@@ -21,6 +23,22 @@ public class WheelClub : MonoBehaviour
     public Vector2 powerWedge;
     public Vector2 powerSandwitch;
     public GameObject wheel;
+
+
+
+    //public bool Hybride = false;
+    //public bool Putter = false;
+    public bool Driver = false;
+    //public bool Wedge = false;
+    //public bool Sandwitch = false;
+
+
+    public static WheelClub Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
