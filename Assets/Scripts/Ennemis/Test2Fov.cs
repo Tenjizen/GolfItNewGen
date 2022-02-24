@@ -13,7 +13,14 @@ public class Test2Fov : MonoBehaviour
 
     public float Aim;
 
+
+    public SpriteRenderer SpriteRenderer;
+    [SerializeField] private Sprite spriteUpOrRight;
+    [SerializeField] private Sprite spriteDownOrLeft;
+
     private bool started = false;
+    private bool flip = false;
+    public bool fliped = false;
 
     Collider2D[] playerInRadius;
     public List<Transform> visiblePlayer = new List<Transform>();
@@ -22,20 +29,40 @@ public class Test2Fov : MonoBehaviour
     void Start()
     {
         started = true;
+        flip = true;
+       //fliped = true;
+
+        if (fliped)
+        {
+            SpriteRenderer.sprite = spriteDownOrLeft;
+            fliped = false;
+        }
+        else
+        {
+            SpriteRenderer.sprite = spriteUpOrRight;
+            fliped = true;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if (flip)
+        {
+            flip = false;
+            StartCoroutine(FlipFOV(5));
+
+        }
         FindVisiblePlayer();
 
-        //if (visiblePlayer[] == none)
-        //    Debug.Log("see you");
         if (started)
         {
             transform.Rotate(0, 0, Aim);
             started = false;
+
+            if (Aim != 180 || Aim != -180)
+                Aim = 180;
         }
+
     }
 
     private void FindVisiblePlayer()
@@ -56,9 +83,11 @@ public class Test2Fov : MonoBehaviour
                 if (!Physics2D.Raycast(transform.position, dirPlayer, disancePlayer, obstacleMask))
                 {
                     if (Physics2D.Raycast(transform.position, dirPlayer, disancePlayer, playerMask))
-                        { visiblePlayer.Add(player);
+                    {
+                        visiblePlayer.Add(player);
                         Debug.Log("see you");
-                    } }
+                    }
+                }
 
             }
 
@@ -78,4 +107,24 @@ public class Test2Fov : MonoBehaviour
         return new Vector2(Mathf.Cos(angleDeg * Mathf.Deg2Rad), Mathf.Sin(angleDeg * Mathf.Deg2Rad));
     }
 
+
+    public IEnumerator FlipFOV(int n)
+    {
+        yield return new WaitForSeconds(n);
+        flip = true;
+        if (fliped)
+        {
+            SpriteRenderer.sprite = spriteDownOrLeft;
+            fliped = false;
+        }
+        else
+        {
+            SpriteRenderer.sprite = spriteUpOrRight;
+            fliped = true;
+        }
+        Aim = -Aim;
+        transform.Rotate(0, 0, Aim);
+        Debug.Log("flip");
+
+    }
 }

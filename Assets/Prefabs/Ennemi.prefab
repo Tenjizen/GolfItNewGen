@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8965632879198357800}
   - component: {fileID: 8965632879198357806}
+  - component: {fileID: 8779776588939906902}
+  - component: {fileID: 3188441544434866776}
   m_Layer: 1
   m_Name: Ennemi
   m_TagString: Ennemi
@@ -71,8 +73,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bbad30e4518bcf04fa15acd52a7657ff, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: d8dedc17adb9ecd4086859ab3981f3b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,6 +85,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8779776588939906902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8965632879198357807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945ce71f89fcf69428384853c9557a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpriteRenderer: {fileID: 8965632879198357806}
+  spriteEnnemisLife: {fileID: 0}
+  spriteEnnemisDie: {fileID: 21300000, guid: b184adf32bc5f0b4daa2917ff5c73d40, type: 3}
+--- !u!70 &3188441544434866776
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8965632879198357807}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 80, y: 45}
+  m_Direction: 0
 --- !u!1 &8965632879580060495
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +239,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8965632880651045481}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -230,9 +263,13 @@ MonoBehaviour:
   viewAngle: 120
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 821
+    m_Bits: 565
   playerMask:
     serializedVersion: 2
     m_Bits: 192
   Aim: 90
+  SpriteRenderer: {fileID: 8965632879198357806}
+  spriteUpOrRight: {fileID: 21300000, guid: 1019d2c11ed88ab44be6ed86e58fd087, type: 3}
+  spriteDownOrLeft: {fileID: 21300000, guid: f3610b9a500dd2f43a6fe376f9b80426, type: 3}
+  fliped: 0
   visiblePlayer: []
