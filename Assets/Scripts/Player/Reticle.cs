@@ -25,6 +25,7 @@ public class Reticle : MonoBehaviour
         {
             ready = false;
             CircleCollider.Instance.restart = true;
+            AudioManager.Instance.PlaySound("snd_jingle_defeat2");
 
         }
         if (!ready && CircleCollider.Instance.restart && Line.Instance.rb.velocity.magnitude < 0.01f)

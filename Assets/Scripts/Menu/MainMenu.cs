@@ -30,16 +30,16 @@ public class MainMenu : MonoBehaviour
         snd_hit_hybride
         -?snd_hit_man -> KillEnnemis
         snd_hit_putter
+        snd_hit_wedge
         ?snd_hit_sandwich1
         ?snd_hit_sandwich2
-        snd_hit_wedge
         -snd_interface -> WheelClub
-        snd_jingle_defeat2
-        snd_jingle_victory
-        snd_walk
-        ?snd_wall_hit
-        ?snd_menu4
+        -snd_jingle_defeat2 -> Reticle
+        -snd_jingle_victory -> Hole
+        -snd_walk -> CircleCollider
+        snd_wall_hit
     music :
+        ?snd_menu4
         -snd_game_music 
     */
     private void Update()
@@ -53,10 +53,7 @@ public class MainMenu : MonoBehaviour
                 OnClickBackSettings();
             }
         }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            AudioManager.Instance.PlaySound("snd_collect");
-        }
+
     }
 
     public void OnClickCredits()

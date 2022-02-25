@@ -34,6 +34,8 @@ public class Hole : MonoBehaviour
             Reticle.Instance.ready = false;
 
             animator.SetBool("IsHole", true);
+            AudioManager.Instance.PlaySound("snd_jingle_victory");
+
 
         }
         else
