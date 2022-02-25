@@ -22,7 +22,7 @@ public class clamerde : MonoBehaviour
     {
         bonus.enabled = false;
 
-        WheelClubManagement.Instance.Init();
+        //WheelClubManagement.Instance.Init();
     }
 
     // Update is called once per frame
