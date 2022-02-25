@@ -32,6 +32,7 @@ public class Caisse : MonoBehaviour
     {
         yield return new WaitForSeconds(0.7f);
             Destroy(this.gameObject);
+
             collider2D.isTrigger = true;
         
     }

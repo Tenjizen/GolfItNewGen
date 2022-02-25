@@ -8,6 +8,9 @@ public class KillEnnemis : MonoBehaviour
 
     public SpriteRenderer SpriteRenderer;
     [SerializeField] private Sprite spriteEnnemisDie;
+
+    public Test2Fov fov;
+
     public Animator animator;
 
     private bool collisionWithEnnemi = false;
@@ -33,9 +36,15 @@ public class KillEnnemis : MonoBehaviour
         }
         else if (col.transform.tag == "Ball")
         {
+            fov.animatorLeftRight.enabled = false;
+            fov.animatorFrontBack.enabled = false;
+            fov.SpriteRenderer.enabled = true;
+            fov.SpriteRendererLeftRight.enabled = false;
             SpriteRenderer.sprite = spriteEnnemisDie;
             transform.Find("FOV").gameObject.SetActive(false);
             Debug.Log("triggers BALL!");
+            //Test2Fov.Instance.animatorLeftRight.SetBool("IsAlive", false);
+
         }
 
     }

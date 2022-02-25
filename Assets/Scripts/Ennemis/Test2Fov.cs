@@ -13,10 +13,11 @@ public class Test2Fov : MonoBehaviour
 
     public float Aim;
 
+    public Animator animatorFrontBack;
+    public Animator animatorLeftRight;
 
     public SpriteRenderer SpriteRenderer;
-    [SerializeField] private Sprite spriteUpOrRight;
-    [SerializeField] private Sprite spriteDownOrLeft;
+    public SpriteRenderer SpriteRendererLeftRight;
 
     private bool started = false;
     private bool flip = false;
@@ -25,22 +26,29 @@ public class Test2Fov : MonoBehaviour
     Collider2D[] playerInRadius;
     public List<Transform> visiblePlayer = new List<Transform>();
 
-    // Start is called before the first frame update
-    void Start()
+    public static Test2Fov Instance;
+
+    void Awake()
     {
+        Instance = this;
+
         started = true;
         flip = true;
-        //fliped = true;
-
+        if (Aim == 0|| Aim == 180)
+            SpriteRenderer.enabled = false;
+        else
+            SpriteRendererLeftRight.enabled = false;
         if (fliped)
         {
-            SpriteRenderer.sprite = spriteDownOrLeft;
             fliped = false;
+            animatorLeftRight.SetBool("Left", true);
+            animatorFrontBack.SetBool("Front", false);
         }
         else
         {
-            SpriteRenderer.sprite = spriteUpOrRight;
             fliped = true;
+            animatorLeftRight.SetBool("Left", false);
+            animatorFrontBack.SetBool("Front", true);
         }
     }
 
@@ -115,13 +123,16 @@ public class Test2Fov : MonoBehaviour
         flip = true;
         if (fliped)
         {
-            SpriteRenderer.sprite = spriteDownOrLeft;
             fliped = false;
+            animatorLeftRight.SetBool("Left", true);
+            animatorFrontBack.SetBool("Front", false);
+
         }
         else
         {
-            SpriteRenderer.sprite = spriteUpOrRight;
             fliped = true;
+            animatorLeftRight.SetBool("Left", false);
+            animatorFrontBack.SetBool("Front", true);
         }
         Aim = -Aim;
         transform.Rotate(0, 0, Aim);
