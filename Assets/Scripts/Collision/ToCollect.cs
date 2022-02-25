@@ -13,7 +13,7 @@ public class ToCollect : MonoBehaviour
             if (this.tag == "Collect")
             {
                 Line.Instance.toCollect++;
-                AudioManager.Instance.PlaySound("snd_collect");
+                //AudioManager.Instance.PlaySound("snd_collect");
             }
 
         }

@@ -4,6 +4,8 @@ using System.Collections;
 public class MurCassable : MonoBehaviour
 {
     public new Collider2D collider2D;
+
+    public Animator animator;
     private void OnTriggerEnter2D(Collider2D col)
     {
 
@@ -19,8 +21,10 @@ public class MurCassable : MonoBehaviour
             {
                 if (Line.Instance.rb.velocity.magnitude > 20)
                 {
-                    AudioManager.Instance.PlaySound("snd_break_wall");
-                    Destroy(this.gameObject);
+                    //AudioManager.Instance.PlaySound("snd_break_wall");
+
+                    animator.SetBool("explosionCaisse", true);
+                    StartCoroutine(Destruction());
                     Debug.Log("DESTRUCTIONNNN!" + col);
                     collider2D.isTrigger = true;
                 }
@@ -45,6 +49,13 @@ public class MurCassable : MonoBehaviour
         yield return new WaitForSeconds(3);
         collider2D.isTrigger = true;
         Debug.Log("trigger true");
+
+    }
+    private IEnumerator Destruction()
+    {
+        yield return new WaitForSeconds(0.7f);
+        Destroy(this.gameObject);
+        collider2D.isTrigger = true;
 
     }
 }

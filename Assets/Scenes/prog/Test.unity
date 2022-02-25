@@ -7636,6 +7636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5191a2b140632e5459c2a3d04b613f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1330927716}
   collider2D: {fileID: 1330927713}
 --- !u!4 &1330927715
 Transform:

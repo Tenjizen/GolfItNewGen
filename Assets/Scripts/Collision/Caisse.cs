@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Caisse : MonoBehaviour
 {
+    public Animator animator;
     public new Collider2D collider2D;
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -14,10 +15,10 @@ public class Caisse : MonoBehaviour
         }
         else
         {
-        AudioManager.Instance.PlaySound("snd_break_box");
+        //AudioManager.Instance.PlaySound("snd_break_box");
             Debug.Log("DESTRUCTIONNNN!");
-            Destroy(this.gameObject);
-            collider2D.isTrigger = true;
+            animator.SetBool("explosionCaisse", true);
+            StartCoroutine(Destruction());
         }
     }
     private IEnumerator WaitAndPrint()
@@ -26,5 +27,12 @@ public class Caisse : MonoBehaviour
         collider2D.isTrigger = true;
         Debug.Log("trigger true");
 
+    }
+    private IEnumerator Destruction()
+    {
+        yield return new WaitForSeconds(0.7f);
+            Destroy(this.gameObject);
+            collider2D.isTrigger = true;
+        
     }
 }
