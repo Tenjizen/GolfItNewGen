@@ -4251,6 +4251,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8779776588939906902, guid: 4814f2dce7b1f62409f26eb32dd028ea, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1825103186}
     - target: {fileID: 8965632879198357800, guid: 4814f2dce7b1f62409f26eb32dd028ea, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -10243,6 +10247,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8779776588939906902, guid: 4814f2dce7b1f62409f26eb32dd028ea, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1825103186}
     - target: {fileID: 8965632879198357800, guid: 4814f2dce7b1f62409f26eb32dd028ea, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -10706,6 +10714,7 @@ MonoBehaviour:
   player: {fileID: 1825103179}
   rb: {fileID: 2095817420}
   ball: {fileID: 2095817419}
+  animator: {fileID: 1825103186}
   lr: {fileID: 0}
 --- !u!120 &2095817426
 LineRenderer:
