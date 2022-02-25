@@ -21,7 +21,11 @@ public class Line : MonoBehaviour
 
 
     public Animator animator;
+    public Animator animatorBall;
+    public Animator animatorBallOrigin;
 
+    public SpriteRenderer SpriteRenderer;
+    public SpriteRenderer SpriteRendererBall;
 
     public static Line Instance;
 
@@ -32,7 +36,7 @@ public class Line : MonoBehaviour
     {
         cam = Camera.main;
         Instance = this;
-
+        
     }
     private void Start()
     {
@@ -53,8 +57,13 @@ public class Line : MonoBehaviour
             Reticle.Instance.ready = false;
         }
         else if (rb.velocity.magnitude < 0.4f && !Hole.Instance.inHole && !CircleCollider.Instance.restart && !WheelClub.Instance.wheel.activeInHierarchy)
+        {
             Reticle.Instance.ready = true;
-
+            animatorBall.SetBool("IsDriver", false);
+            animatorBallOrigin.SetBool("Move", false);
+            SpriteRenderer.enabled = true;
+            SpriteRendererBall.enabled = false;
+        }
         if (!Reticle.Instance.ready)
         {
             NotReady();
@@ -122,6 +131,22 @@ public class Line : MonoBehaviour
         dir.EndLine();
         Debug.Log(endMousePos);
         CircleCollider.Instance.countShot++;
+
+        if (WheelClub.Instance.Driver)
+        {
+            animatorBall.SetBool("IsDriver", true);
+        
+            SpriteRenderer.enabled = true;
+            SpriteRendererBall.enabled = false;
+        }
+        
+        
+        else if (!WheelClub.Instance.Driver)
+        {
+            animatorBallOrigin.SetBool("Move", true);
+            SpriteRenderer.enabled = false;
+            SpriteRendererBall.enabled = true;
+        }
 
         /*if (power == WheelClub.Instance.powerHybride)
         {
