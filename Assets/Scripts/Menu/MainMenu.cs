@@ -37,7 +37,7 @@ public class MainMenu : MonoBehaviour
         -snd_jingle_defeat2 -> Reticle
         -snd_jingle_victory -> Hole
         -snd_walk -> CircleCollider
-        snd_wall_hit
+        -snd_wall_hit -> Wall
     music :
         ?snd_menu4
         -snd_game_music 
