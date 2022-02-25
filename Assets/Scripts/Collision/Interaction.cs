@@ -10,12 +10,8 @@ public class Interaction : MonoBehaviour
     [SerializeField] private Sprite spriteButtonUsed;
  
     [SerializeField] private BoxCollider2D Porte;
-    [SerializeField] private SpriteRenderer PorteImage;
-    [SerializeField] private Sprite spritePorte;
-    [SerializeField] private Sprite spritePorteOpen;
-    [SerializeField] private SpriteRenderer PorteImageBis;
-    [SerializeField] private Sprite spritePorteBis;
-    [SerializeField] private Sprite spritePorteOpenBis;
+
+    public Animator animator;
 
     private bool ButtonTrigger = false;
     private bool ButtonUsed = false;
@@ -30,8 +26,6 @@ public class Interaction : MonoBehaviour
     private void Start()
     {
         ButtonImage.sprite = spriteButton;
-        PorteImage.sprite = spritePorte;
-        PorteImageBis.sprite = spritePorteBis;
     }
 
     private void Update()
@@ -39,6 +33,7 @@ public class Interaction : MonoBehaviour
 
         if (ButtonTrigger && !ButtonUsed && Input.GetKeyDown(KeyCode.E))
         {
+            animator.SetBool("IsOpen", true);
             Debug.Log("Button pressed");
             ButtonUsed = true;
             ButtonImage.sprite = spriteButtonUsed;
@@ -51,8 +46,6 @@ public class Interaction : MonoBehaviour
 
         if (ButtonUsed)
         {
-            PorteImage.sprite = spritePorteOpen;
-            PorteImageBis.sprite = spritePorteOpenBis;
             Porte.enabled = false;
 
         }
