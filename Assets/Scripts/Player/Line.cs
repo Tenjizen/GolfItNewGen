@@ -123,7 +123,7 @@ public class Line : MonoBehaviour
         Debug.Log(endMousePos);
         CircleCollider.Instance.countShot++;
 
-        if (power == WheelClub.Instance.powerHybride)
+        /*if (power == WheelClub.Instance.powerHybride)
         {
             AudioManager.Instance.PlaySound("snd_hit_hybride");
 
@@ -144,7 +144,7 @@ public class Line : MonoBehaviour
         {
             AudioManager.Instance.PlaySound("snd_hit_sandwich1");
             //AudioManager.Instance.PlaySound("snd_hit_sandwich2");
-        }
+        }*/
     }
 
 }

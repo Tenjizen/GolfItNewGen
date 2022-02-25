@@ -11,9 +11,10 @@ public class ToCollect : MonoBehaviour
             Debug.Log(col.transform.tag);
             Destroy(this.gameObject);
             if (this.tag == "Collect")
+            {
                 Line.Instance.toCollect++;
-            AudioManager.Instance.PlaySound("snd_collect");
-
+                AudioManager.Instance.PlaySound("snd_collect");
+            }
 
         }
     }
