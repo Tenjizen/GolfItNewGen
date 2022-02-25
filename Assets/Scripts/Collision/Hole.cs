@@ -12,6 +12,8 @@ public class Hole : MonoBehaviour
     public float maxSpeedForGoal = 5f;
     public bool inHole = false;
 
+    public Animator animator;
+
     public static Hole Instance;
 
     private void Awake()
@@ -30,6 +32,8 @@ public class Hole : MonoBehaviour
         {
             Line.Instance.ball.transform.position = Vector2.MoveTowards(Line.Instance.ball.transform.position, target.transform.position, smoothSpeed * Time.deltaTime);
             Reticle.Instance.ready = false;
+
+            animator.SetBool("IsHole", true);
 
         }
         else
