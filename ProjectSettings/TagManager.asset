@@ -9,6 +9,8 @@ TagManager:
   - Button
   - Ennemi
   - FoV
+  - Bonus
+  - Collect
   layers:
   - Default
   - TransparentFX

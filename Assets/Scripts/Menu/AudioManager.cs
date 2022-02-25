@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource audioSource;
 
     public AudioClip[] audioClips;
+    public AudioClip[] audioMusics;
     public static AudioManager Instance;
 
 

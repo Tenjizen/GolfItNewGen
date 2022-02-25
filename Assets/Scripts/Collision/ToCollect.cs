@@ -12,13 +12,9 @@ public class ToCollect : MonoBehaviour
             Destroy(this.gameObject);
             if (this.tag == "Collect")
                 Line.Instance.toCollect++;
+            //AudioManager.Instance.PlaySound("ToCollect");
 
         }
-        //if (col.transform.tag == "Ball")
-        //{
-        //    Debug.Log("triggers ball!");
-        //    Destroy(this.gameObject);
-        //}
     }
 
 }
