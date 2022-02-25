@@ -362,6 +362,7 @@ MonoBehaviour:
   shotMax: 20
   countShot: 0
   restart: 0
+  animator: {fileID: 0}
 --- !u!4 &22178754
 Transform:
   m_ObjectHideFlags: 0
@@ -3680,6 +3681,7 @@ MonoBehaviour:
   player: {fileID: 1093894466}
   rb: {fileID: 343909981}
   ball: {fileID: 343909979}
+  animator: {fileID: 0}
   lr: {fileID: 0}
 --- !u!50 &343909981
 Rigidbody2D:
@@ -4782,6 +4784,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0}
   maxSpeedForGoal: 5
   inHole: 0
+  animator: {fileID: 0}
 --- !u!212 &429576747
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4897,6 +4900,7 @@ MonoBehaviour:
   mySecondScene: 
   myThirdScene: 
   button: {fileID: 441758181}
+  imageTest: {fileID: 0}
   imageLocked: {fileID: 467311883}
   locked: {fileID: 21300000, guid: e610bc424b6c45346ab60a14a6804698, type: 3}
   toCollect: 0
@@ -14249,8 +14253,10 @@ GameObject:
   m_Component:
   - component: {fileID: 938173961}
   - component: {fileID: 938173960}
+  - component: {fileID: 938173963}
+  - component: {fileID: 938173962}
   m_Layer: 0
-  m_Name: Porte_bleu_double
+  m_Name: Porte_rouge_double
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14296,7 +14302,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: ac7053e719c2d9a47871b10548687ae1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2894fff163fb91f4d80a969ad681d7ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14316,11 +14322,56 @@ Transform:
   m_GameObject: {fileID: 938173959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 24.42, y: 58.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &938173962
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938173959}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 952a060f55a796444a76a5ad3154bc03, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &938173963
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938173959}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.86, y: 4.25}
+    newSize: {x: 7.54, y: 7.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.86, y: 4.25}
+  m_EdgeRadius: 0
 --- !u!1 &952547009
 GameObject:
   m_ObjectHideFlags: 0
@@ -14847,6 +14898,7 @@ MonoBehaviour:
   mySecondScene: 
   myThirdScene: 
   button: {fileID: 983923577}
+  imageTest: {fileID: 0}
   imageLocked: {fileID: 1261122313}
   locked: {fileID: 21300000, guid: e610bc424b6c45346ab60a14a6804698, type: 3}
   toCollect: 0
@@ -15500,6 +15552,7 @@ MonoBehaviour:
   mySecondScene: 
   myThirdScene: 
   button: {fileID: 0}
+  imageTest: {fileID: 0}
   imageLocked: {fileID: 0}
   locked: {fileID: 0}
   toCollect: 0
@@ -17541,6 +17594,7 @@ MonoBehaviour:
   mySecondScene: 
   myThirdScene: 
   button: {fileID: 1310807045}
+  imageTest: {fileID: 0}
   imageLocked: {fileID: 589009667}
   locked: {fileID: 21300000, guid: e610bc424b6c45346ab60a14a6804698, type: 3}
   toCollect: 0
@@ -18710,6 +18764,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5941863117208890051, guid: 9d6fc177cd9472f45bf6be919ba17f7a, type: 3}
+      propertyPath: Porte
+      value: 
+      objectReference: {fileID: 938173963}
+    - target: {fileID: 5941863117208890051, guid: 9d6fc177cd9472f45bf6be919ba17f7a, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 938173962}
     - target: {fileID: 5941863117208890053, guid: 9d6fc177cd9472f45bf6be919ba17f7a, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -22404,6 +22466,7 @@ MonoBehaviour:
   mySecondScene: 
   myThirdScene: 
   button: {fileID: 1753282851}
+  imageTest: {fileID: 0}
   imageLocked: {fileID: 144386786}
   locked: {fileID: 21300000, guid: e610bc424b6c45346ab60a14a6804698, type: 3}
   toCollect: 0
@@ -22812,6 +22875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1801680310}
   - component: {fileID: 1801680311}
+  - component: {fileID: 1801680312}
   m_Layer: 0
   m_Name: Sol_2 (9)
   m_TagString: Untagged
@@ -22884,6 +22948,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1801680312
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801680309}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.024224877, y: 0.3527349}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.19, y: 4.69}
+    newSize: {x: 5.19, y: 4.69}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.7216463, y: 0.7362539}
+  m_EdgeRadius: 0
 --- !u!1 &1817143297
 GameObject:
   m_ObjectHideFlags: 0
