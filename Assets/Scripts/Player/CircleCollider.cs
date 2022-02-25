@@ -13,6 +13,9 @@ public class CircleCollider : MonoBehaviour
 
     public bool restart = false;
 
+
+    public Animator animator;
+
     private Vector2 m_direction = Vector2.zero;
 
     public static CircleCollider Instance;
@@ -41,6 +44,12 @@ public class CircleCollider : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         m_direction = new Vector2(horizontal, vertical);
+
+        animator.SetFloat("Horizontal", horizontal);
+        animator.SetFloat("Vertical", vertical);
+        animator.SetFloat("Speed", m_direction.sqrMagnitude);
+
+
     }
     private void FixedUpdate()
     {
