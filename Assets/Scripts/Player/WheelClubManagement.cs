@@ -16,6 +16,7 @@ public class WheelClubManagement : MonoBehaviour
     public string myFirstScene, mySecondScene, myThirdScene;
 
     public Button button;
+    public Image imageTest;
     public Image imageLocked;
     [SerializeField] private Sprite locked;
 
@@ -173,6 +174,12 @@ public class WheelClubManagement : MonoBehaviour
         selectedItem.sprite = icon.sprite;
         itemText.text = itemName;
     }
+
+    private void OnMouseOver()
+    {
+        button.image = imageTest;
+    }
+
 }
 
 
