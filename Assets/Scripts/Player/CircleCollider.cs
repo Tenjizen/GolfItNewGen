@@ -14,7 +14,6 @@ public class CircleCollider : MonoBehaviour
     public bool restart = false;
 
     private float horizontal, vertical;
-    private bool isWalking;
 
     public Animator animator;
 
@@ -30,7 +29,6 @@ public class CircleCollider : MonoBehaviour
     private void Start()
     {
         restart = false;
-        isWalking = false;
 
     }
     private void Update()

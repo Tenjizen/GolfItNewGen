@@ -153,19 +153,19 @@ public class Line : MonoBehaviour
             AudioManager.Instance.PlaySound("snd_hit_hybride");
 
         }
-        if (power == WheelClub.Instance.powerPutter)
+        else if (power == WheelClub.Instance.powerPutter)
         {
             AudioManager.Instance.PlaySound("snd_hit_putter");
         }
-        if (power == WheelClub.Instance.powerDriver)
+        else if (power == WheelClub.Instance.powerDriver)
         {
             AudioManager.Instance.PlaySound("snd_hit_driver");
         }
-        if (power == WheelClub.Instance.powerWedge)
+        else if (power == WheelClub.Instance.powerWedge)
         {
             AudioManager.Instance.PlaySound("snd_hit_wedge");
         }
-        if (power == WheelClub.Instance.powerSandwitch)
+        else if (power == WheelClub.Instance.powerSandwitch)
         {
             AudioManager.Instance.PlaySound("snd_hit_sandwich1");
             //AudioManager.Instance.PlaySound("snd_hit_sandwich2");
