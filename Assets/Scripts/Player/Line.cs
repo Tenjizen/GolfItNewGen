@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Line : MonoBehaviour
 {
-    [SerializeField] private float power = 10f;
+    public float power = 10f;
     public Vector2 minPower;
     public Vector2 maxPower;
     [SerializeField] private Direction dir;

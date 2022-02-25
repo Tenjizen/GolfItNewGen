@@ -118,8 +118,7 @@ public class WheelClubManagement : MonoBehaviour
     }
     public void Init()
     {
-        line.minPower = -wheelClub.powerHybride;
-        line.maxPower = wheelClub.powerHybride;
+        line.power = wheelClub.powerHybride;
 
         selectedItem.sprite = clamerde.Instance.club.sprite;
     }
@@ -129,40 +128,35 @@ public class WheelClubManagement : MonoBehaviour
         switch (PowerClub)
         {
             case WheelClub.PowerClub.Hybride:
-                line.minPower = -wheelClub.powerHybride;
-                line.maxPower = wheelClub.powerHybride;
+                line.power = wheelClub.powerHybride;
                 wheelClub.Driver = false;
                 break;
             case WheelClub.PowerClub.Putter:
                 if (unlockedPutter)
                 {
-                    line.minPower = -wheelClub.powerPutter;
-                    line.maxPower = wheelClub.powerPutter;
+                    line.power = wheelClub.powerPutter;
                     wheelClub.Driver = false;
                 }
                 break;
             case WheelClub.PowerClub.Driver:
                 if (unlockedDriver)
                 {
-                    line.minPower = -wheelClub.powerDriver;
-                    line.maxPower = wheelClub.powerDriver;
+                    line.power = wheelClub.powerDriver;
                     wheelClub.Driver = true;
                 }
                 break;
             case WheelClub.PowerClub.Wedge:
                 if (unlockedWedge)
                 {
-                    line.minPower = -wheelClub.powerWedge;
-                    line.maxPower = wheelClub.powerWedge;
+                    line.power = wheelClub.powerWedge;
                     wheelClub.Driver = false;
                 }
                 break;
             case WheelClub.PowerClub.Sandwitch:
                 if (unlockedSanwitch)
                 {
-                    Debug.Log("unloock askip");
-                    line.minPower = -wheelClub.powerSandwitch;
-                    line.minPower = wheelClub.powerSandwitch;
+                    Debug.Log("unloock askip"); 
+                    line.power = wheelClub.powerSandwitch;
                     wheelClub.Driver = false;
                 }
                 break;

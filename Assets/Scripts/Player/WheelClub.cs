@@ -17,11 +17,11 @@ public class WheelClub : MonoBehaviour
 
     public Line line;
     [SerializeField] private PowerClub club;
-    public Vector2 powerHybride;
-    public Vector2 powerPutter;
-    public Vector2 powerDriver;
-    public Vector2 powerWedge;
-    public Vector2 powerSandwitch;
+    public int powerHybride;
+    public int powerPutter;
+    public int powerDriver;
+    public int powerWedge;
+    public int powerSandwitch;
     public GameObject wheel;
 
 
