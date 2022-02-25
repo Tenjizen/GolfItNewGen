@@ -202,7 +202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpriteRenderer: {fileID: 8965632879198357806}
-  spriteEnnemisDie: {fileID: 21300000, guid: b184adf32bc5f0b4daa2917ff5c73d40, type: 3}
+  spriteEnnemisDie: {fileID: 21300000, guid: bc0d75b6ddade0245adefca3dcf904c7, type: 3}
+  fov: {fileID: 8965632880651045483}
   animator: {fileID: 0}
 --- !u!70 &3188441544434866776
 CapsuleCollider2D:
@@ -395,7 +396,5 @@ MonoBehaviour:
   animatorLeftRight: {fileID: 2068585980485297070}
   SpriteRenderer: {fileID: 8965632879198357806}
   SpriteRendererLeftRight: {fileID: 5843370975332750743}
-  spriteUpOrRight: {fileID: 21300000, guid: 1019d2c11ed88ab44be6ed86e58fd087, type: 3}
-  spriteDownOrLeft: {fileID: 21300000, guid: f3610b9a500dd2f43a6fe376f9b80426, type: 3}
   fliped: 1
   visiblePlayer: []
