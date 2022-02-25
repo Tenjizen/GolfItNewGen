@@ -12128,7 +12128,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8965632879198357800, guid: 4814f2dce7b1f62409f26eb32dd028ea, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8965632879198357800, guid: 4814f2dce7b1f62409f26eb32dd028ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12177,6 +12177,14 @@ PrefabInstance:
     - target: {fileID: 8965632879198357807, guid: 4814f2dce7b1f62409f26eb32dd028ea, type: 3}
       propertyPath: m_Name
       value: Ennemi (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965632880651045483, guid: 4814f2dce7b1f62409f26eb32dd028ea, type: 3}
+      propertyPath: Aim
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965632880651045483, guid: 4814f2dce7b1f62409f26eb32dd028ea, type: 3}
+      propertyPath: fliped
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4814f2dce7b1f62409f26eb32dd028ea, type: 3}
@@ -16380,7 +16388,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8965632879198357800, guid: 4814f2dce7b1f62409f26eb32dd028ea, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8965632879198357800, guid: 4814f2dce7b1f62409f26eb32dd028ea, type: 3}
       propertyPath: m_LocalPosition.x
