@@ -63,9 +63,9 @@ public class CircleCollider : MonoBehaviour
     {
 
         player.AddForce(m_direction * MoveForce);
-        if (player.velocity.magnitude > 0.2) {
-            AudioManager.Instance.PlaySound("snd_walk");
-        }
+        //if (player.velocity.magnitude > 0.2) {
+            //AudioManager.Instance.PlaySound("snd_walk");
+        //}
     }
     private void Animate()
     {

@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5941863117208890055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 37.71, y: -0.51, z: 0}
-  m_LocalScale: {x: 2.16, y: 5, z: 1}
+  m_LocalScale: {x: 0.6, y: 1.170148, z: 0.11701481}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,9 +72,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 4df21bef7a61dcc478c6ab20ba11dc45, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,9 +97,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12, y: 0}
-  m_Size: {x: 0.4, y: 0.2}
-  m_Direction: 1
+  m_Offset: {x: 0.06, y: 0}
+  m_Size: {x: 1.45, y: 2.14}
+  m_Direction: 0
 --- !u!114 &5941863117208890051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,8 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonImage: {fileID: 5941863117208890053}
-  spriteButton: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  spriteButtonUsed: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  spriteButton: {fileID: 21300000, guid: 4df21bef7a61dcc478c6ab20ba11dc45, type: 3}
+  spriteButtonUsed: {fileID: 21300000, guid: 257e7f5c1debd7b4ab12930327823a79, type: 3}
   Porte: {fileID: 0}
-  smoothSpeed: 15
-  moveDoor: 0
+  animator: {fileID: 0}

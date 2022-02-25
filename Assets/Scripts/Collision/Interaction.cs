@@ -35,9 +35,10 @@ public class Interaction : MonoBehaviour
         {
             animator.SetBool("IsOpen", true);
             Debug.Log("Button pressed");
-            AudioManager.Instance.PlaySound("snd_door_open");
+            //AudioManager.Instance.PlaySound("snd_door_open");
             ButtonUsed = true;
             ButtonImage.sprite = spriteButtonUsed;
+            Porte.enabled= true;
         }
         else if (ButtonTrigger && ButtonUsed && Input.GetKeyDown(KeyCode.E))
         {
@@ -45,11 +46,6 @@ public class Interaction : MonoBehaviour
         }
 
 
-        if (ButtonUsed)
-        {
-            Porte.enabled = false;
-
-        }
 
     }
 
