@@ -12,6 +12,7 @@ public class ModifSpritButton : MonoBehaviour
 
     public void MouseOver()
     {
+        AudioManager.Instance.PlaySound("snd_bouton");
         button.image = imageTest;
         imageTest.sprite = Sprite;
     }

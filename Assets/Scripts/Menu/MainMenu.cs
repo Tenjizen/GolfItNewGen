@@ -13,8 +13,35 @@ public class MainMenu : MonoBehaviour
         mainMenu.SetActive(true);
         settings.SetActive(false);
         credits.SetActive(false);
-        keys.SetActive(false); 
+        keys.SetActive(false);
     }
+
+    /*all sound name -> how used
+     clip :
+        -snd_bonus -> BonusShot
+        -snd_bouton -> ModifSpritButton
+        -snd_break_box -> Caisse
+        -snd_break_wall -> MurCassable
+        -snd_collect -> ToCollect
+        snd_door_close
+        -snd_door_open -> Interaction
+        -?snd_ennemy_death1 -> KillEnnemis
+        snd_hit_driver
+        snd_hit_hybride
+        -?snd_hit_man -> KillEnnemis
+        snd_hit_putter
+        ?snd_hit_sandwich1
+        ?snd_hit_sandwich2
+        snd_hit_wedge
+        -snd_interface -> WheelClub
+        snd_jingle_defeat2
+        snd_jingle_victory
+        snd_walk
+        ?snd_wall_hit
+        ?snd_menu4
+    music :
+        -snd_game_music 
+    */
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -25,6 +52,10 @@ public class MainMenu : MonoBehaviour
             {
                 OnClickBackSettings();
             }
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            AudioManager.Instance.PlaySound("snd_collect");
         }
     }
 

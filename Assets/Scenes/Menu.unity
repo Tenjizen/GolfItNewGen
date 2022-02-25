@@ -4338,8 +4338,27 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: 4b4e94f1af4c96a43868f6e4a3c52d4a, type: 2}
   audioSource: {fileID: 1660156896}
   audioClips:
-  - {fileID: 8300000, guid: 93b90d3150feae74ea10bb1c963d9dec, type: 3}
+  - {fileID: 8300000, guid: b2496afba7e721b4f8fe0eecea9242a8, type: 3}
+  - {fileID: 8300000, guid: 98e90ecac304e644da84932b6f96bba1, type: 3}
+  - {fileID: 8300000, guid: f3dbf2679e87923468efe17f351b2862, type: 3}
+  - {fileID: 8300000, guid: a58e8e1ea4ada1e419ecc057a60b3067, type: 3}
   - {fileID: 8300000, guid: 2cabbbe54498df04db8af316e20a9293, type: 3}
+  - {fileID: 8300000, guid: 33e10db26e9a9a244bd8597f9a6c3ad5, type: 3}
+  - {fileID: 8300000, guid: ae76c96b1a84d7e40aa1558d6b0e098c, type: 3}
+  - {fileID: 8300000, guid: 93b90d3150feae74ea10bb1c963d9dec, type: 3}
+  - {fileID: 8300000, guid: 79c05386e1ed84246aba15c4ad3ab3a5, type: 3}
+  - {fileID: 8300000, guid: c0c08c5dc90ac504ebaf0d84edc422f4, type: 3}
+  - {fileID: 8300000, guid: 7285318f0c2bff140af8ff9bda872d29, type: 3}
+  - {fileID: 8300000, guid: 60026fc0b9844144baccd13d8ee8e7aa, type: 3}
+  - {fileID: 8300000, guid: b6c94e866e2cff04c91ca4d1b9edbfaf, type: 3}
+  - {fileID: 8300000, guid: 67b5bf6ebfb6ae941b7c60c98742a8bc, type: 3}
+  - {fileID: 8300000, guid: f273f927910c75d4b9c2a1c0c89f2861, type: 3}
+  - {fileID: 8300000, guid: 03b882ec5d8784546bee9de5db84b979, type: 3}
+  - {fileID: 8300000, guid: a11da07c91f1347488a9516e09d47fb6, type: 3}
+  - {fileID: 8300000, guid: 97498a63ca6285b44a209a53caf46078, type: 3}
+  - {fileID: 8300000, guid: 9c90fcb691feac74796269f04ba2f7d2, type: 3}
+  - {fileID: 8300000, guid: ddbe9e51b66f3f9449b50e884d7bd783, type: 3}
+  - {fileID: 8300000, guid: 05e5770fab798f94cacce906e311f793, type: 3}
   audioMusics:
   - {fileID: 8300000, guid: f2a64644f6e1a8f468ca7ce98df2e0bf, type: 3}
   - {fileID: 8300000, guid: 9c90fcb691feac74796269f04ba2f7d2, type: 3}

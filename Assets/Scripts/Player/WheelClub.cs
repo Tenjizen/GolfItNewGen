@@ -52,6 +52,7 @@ public class WheelClub : MonoBehaviour
             wheel.SetActive(!wheel.activeSelf);
             if (wheel.activeInHierarchy)
             {
+                AudioManager.Instance.PlaySound("snd_interface");
                 Reticle.Instance.ready = false;
                 Time.timeScale = 0;
             }

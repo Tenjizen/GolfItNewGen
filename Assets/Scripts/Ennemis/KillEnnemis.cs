@@ -17,6 +17,8 @@ public class KillEnnemis : MonoBehaviour
         if (collisionWithEnnemi && Input.GetKeyDown(KeyCode.E))
         {
             animator.SetBool("IsAttacking", true);
+            AudioManager.Instance.PlaySound("snd_hit_man");
+            AudioManager.Instance.PlaySound("snd_ennemy_death1");
             SpriteRenderer.sprite = spriteEnnemisDie;
             transform.Find("FOV").gameObject.SetActive(false);
             StartCoroutine(AnimAttacking(1.5f));

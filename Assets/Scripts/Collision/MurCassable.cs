@@ -19,6 +19,7 @@ public class MurCassable : MonoBehaviour
             {
                 if (Line.Instance.rb.velocity.magnitude > 20)
                 {
+                    AudioManager.Instance.PlaySound("snd_break_wall");
                     Destroy(this.gameObject);
                     Debug.Log("DESTRUCTIONNNN!" + col);
                     collider2D.isTrigger = true;

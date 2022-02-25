@@ -122,7 +122,6 @@ public class WheelClubManagement : MonoBehaviour
         line.maxPower = wheelClub.powerHybride;
 
         selectedItem.sprite = clamerde.Instance.club.sprite;
-        itemText.text = "Ouai";
     }
     public void OnClick()
     {

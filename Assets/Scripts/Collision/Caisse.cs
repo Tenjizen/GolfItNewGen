@@ -14,6 +14,7 @@ public class Caisse : MonoBehaviour
         }
         else
         {
+        AudioManager.Instance.PlaySound("snd_break_box");
             Debug.Log("DESTRUCTIONNNN!");
             Destroy(this.gameObject);
             collider2D.isTrigger = true;

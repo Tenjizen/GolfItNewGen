@@ -35,6 +35,7 @@ public class Interaction : MonoBehaviour
         {
             animator.SetBool("IsOpen", true);
             Debug.Log("Button pressed");
+            AudioManager.Instance.PlaySound("snd_door_open");
             ButtonUsed = true;
             ButtonImage.sprite = spriteButtonUsed;
         }

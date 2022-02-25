@@ -12,7 +12,8 @@ public class ToCollect : MonoBehaviour
             Destroy(this.gameObject);
             if (this.tag == "Collect")
                 Line.Instance.toCollect++;
-            //AudioManager.Instance.PlaySound("ToCollect");
+            AudioManager.Instance.PlaySound("snd_collect");
+
 
         }
     }
