@@ -4338,8 +4338,11 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: 4b4e94f1af4c96a43868f6e4a3c52d4a, type: 2}
   audioSource: {fileID: 1660156896}
   audioClips:
-  - {fileID: 8300000, guid: e6fdfef4560cef343a1d4fdb0bc45a8a, type: 3}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 93b90d3150feae74ea10bb1c963d9dec, type: 3}
+  - {fileID: 8300000, guid: 2cabbbe54498df04db8af316e20a9293, type: 3}
+  audioMusics:
+  - {fileID: 8300000, guid: f2a64644f6e1a8f468ca7ce98df2e0bf, type: 3}
+  - {fileID: 8300000, guid: 9c90fcb691feac74796269f04ba2f7d2, type: 3}
   m_sliderValue: 0.3
 --- !u!82 &1660156896
 AudioSource:
@@ -4351,11 +4354,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 4b4e94f1af4c96a43868f6e4a3c52d4a, type: 2}
-  m_audioClip: {fileID: 8300000, guid: e6fdfef4560cef343a1d4fdb0bc45a8a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f2a64644f6e1a8f468ca7ce98df2e0bf, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
