@@ -38,7 +38,7 @@ public class Interaction : MonoBehaviour
             //AudioManager.Instance.PlaySound("snd_door_open");
             ButtonUsed = true;
             ButtonImage.sprite = spriteButtonUsed;
-            Porte.enabled= true;
+            Porte.enabled= false;
         }
         else if (ButtonTrigger && ButtonUsed && Input.GetKeyDown(KeyCode.E))
         {
