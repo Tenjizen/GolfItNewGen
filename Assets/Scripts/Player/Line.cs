@@ -116,15 +116,35 @@ public class Line : MonoBehaviour
         yield return new WaitForSeconds(n);
         Debug.Log("gklfdqsghjsvjnkjdgnfhvksdfgj THIRD");
         animator.SetBool("EndLancer", false);
-                
-
-                rb.AddForce(force * power, ForceMode2D.Impulse);
-                dir.EndLine();
-                Debug.Log(endMousePos);
-                CircleCollider.Instance.countShot++;
 
 
+        rb.AddForce(force * power, ForceMode2D.Impulse);
+        dir.EndLine();
+        Debug.Log(endMousePos);
+        CircleCollider.Instance.countShot++;
 
+        if (power == WheelClub.Instance.powerHybride)
+        {
+            AudioManager.Instance.PlaySound("snd_hit_hybride");
+
+        }
+        if (power == WheelClub.Instance.powerPutter)
+        {
+            AudioManager.Instance.PlaySound("snd_hit_putter");
+        }
+        if (power == WheelClub.Instance.powerDriver)
+        {
+            AudioManager.Instance.PlaySound("snd_hit_driver");
+        }
+        if (power == WheelClub.Instance.powerWedge)
+        {
+            AudioManager.Instance.PlaySound("snd_hit_wedge");
+        }
+        if (power == WheelClub.Instance.powerSandwitch)
+        {
+            AudioManager.Instance.PlaySound("snd_hit_sandwich1");
+            //AudioManager.Instance.PlaySound("snd_hit_sandwich2");
+        }
     }
 
 }

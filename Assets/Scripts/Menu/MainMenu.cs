@@ -26,13 +26,13 @@ public class MainMenu : MonoBehaviour
         snd_door_close
         -snd_door_open -> Interaction
         -?snd_ennemy_death1 -> KillEnnemis
-        snd_hit_driver
-        snd_hit_hybride
         -?snd_hit_man -> KillEnnemis
-        snd_hit_putter
-        snd_hit_wedge
-        ?snd_hit_sandwich1
-        ?snd_hit_sandwich2
+        -snd_hit_driver -> Line
+        -snd_hit_hybride -> Line
+        -snd_hit_putter -> Line
+        -snd_hit_wedge -> Line
+        -?-snd_hit_sandwich1 -> Line
+        -?-snd_hit_sandwich2 -> Line
         -snd_interface -> WheelClub
         -snd_jingle_defeat2 -> Reticle
         -snd_jingle_victory -> Hole
