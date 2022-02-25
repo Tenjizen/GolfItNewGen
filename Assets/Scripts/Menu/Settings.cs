@@ -9,13 +9,13 @@ public class Settings : MonoBehaviour
 
     private void Awake()
     {
-        SetVolume volume = FindObjectOfType<SetVolume>();
+        AudioManager volume = FindObjectOfType<AudioManager>();
         Slider.value = volume.m_sliderValue;
     }
 
     public void OnVolumeChanged( float value )
     {
-        SetVolume volume = FindObjectOfType<SetVolume>();
+        AudioManager volume = FindObjectOfType<AudioManager>();
         if ( volume != null)
             volume.SetLevel(value);
     }

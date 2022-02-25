@@ -25,7 +25,6 @@ public class WheelClubManagement : MonoBehaviour
     private bool unlockedWedge = false;
     private bool unlockedSanwitch = false;
 
-    public int toCollect = 0;
     [SerializeField] private int isUnlocked;
 
     public static WheelClubManagement Instance;
@@ -55,7 +54,7 @@ public class WheelClubManagement : MonoBehaviour
         {
             unlockedWedge = true;
         }
-        if (toCollect >= isUnlocked)
+        if (Line.Instance.toCollect >= isUnlocked)
             unlockedSanwitch = true;
 
         switch (PowerClub)

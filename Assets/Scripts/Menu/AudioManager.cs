@@ -1,33 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
-
+    public AudioMixer mixer;
     public AudioSource audioSource;
+
+    public AudioClip[] audioClips;
     public static AudioManager Instance;
+
+
 
     private void Awake()
     {
         Instance = this;
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(this.gameObject);
+        SetLevel(m_sliderValue);
     }
 
-    public void PlayClip(AudioClip clip)
+    public float m_sliderValue = 0.3f;
+
+    public void SetLevel(float sliderValue)
     {
-        audioSource.PlayOneShot(clip)
+        m_sliderValue = sliderValue;
+        mixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
+
+        Debug.Log(sliderValue);
+    }
+    public void PlaySound(string name)
+    {
+        AudioClip clip = GetClip(name);
+        audioSource.PlayOneShot(clip);
     }
 
-    // Start is called before the first frame update
-    void Start()
+    AudioClip GetClip( string name)
     {
-        
+        foreach (var item in audioClips)
+        {
+            if (item.name == name)
+                return item;
+        }
+        return null;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
