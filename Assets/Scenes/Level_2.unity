@@ -177,7 +177,7 @@ MonoBehaviour:
   powerDriver: {x: 1, y: 1}
   powerWedge: {x: 4, y: 4}
   powerSandwitch: {x: 3, y: 3}
-  wheel: {fileID: 0}
+  wheel: {fileID: 1145162081}
   Driver: 0
 --- !u!114 &1408368
 MonoBehaviour:
@@ -195,10 +195,10 @@ MonoBehaviour:
   player: {fileID: 198896163}
   radius: 5
   circle: {fileID: 1198694644}
-  shotMax: 2
+  shotMax: 53
   countShot: 0
   restart: 0
-  animator: {fileID: 0}
+  animator: {fileID: 198896160}
 --- !u!4 &1408369
 Transform:
   m_ObjectHideFlags: 0
@@ -6097,6 +6097,7 @@ MonoBehaviour:
   mySecondScene: Level_2
   myThirdScene: Level_3
   button: {fileID: 597226130}
+  imageTest: {fileID: 0}
   imageLocked: {fileID: 1700290211}
   locked: {fileID: 21300000, guid: fe517130b40a1454d960f7a76c627647, type: 3}
   toCollect: 0
@@ -9334,7 +9335,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1009167305}
   - component: {fileID: 1009167312}
-  - component: {fileID: 1009167311}
   - component: {fileID: 1009167310}
   - component: {fileID: 1009167309}
   - component: {fileID: 1009167308}
@@ -9561,24 +9561,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009167304}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ec8378b6dafa664d938936f48b06e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lr: {fileID: 0}
---- !u!114 &1009167311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009167304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82ff826f7d6a00e468a9275606c38eec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1009167312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9598,7 +9586,7 @@ MonoBehaviour:
   player: {fileID: 198896158}
   rb: {fileID: 1009167307}
   ball: {fileID: 1009167304}
-  animator: {fileID: 0}
+  animator: {fileID: 198896160}
   lr: {fileID: 0}
 --- !u!1 &1009836756
 GameObject:
@@ -10448,6 +10436,7 @@ MonoBehaviour:
   mySecondScene: Level_2
   myThirdScene: Level_3
   button: {fileID: 1101891669}
+  imageTest: {fileID: 0}
   imageLocked: {fileID: 772795952}
   locked: {fileID: 21300000, guid: fe517130b40a1454d960f7a76c627647, type: 3}
   toCollect: 0
@@ -11818,6 +11807,7 @@ MonoBehaviour:
   mySecondScene: Level_2
   myThirdScene: Level_3
   button: {fileID: 1182528191}
+  imageTest: {fileID: 0}
   imageLocked: {fileID: 1527962185}
   locked: {fileID: 21300000, guid: fe517130b40a1454d960f7a76c627647, type: 3}
   toCollect: 0
@@ -16225,6 +16215,7 @@ MonoBehaviour:
   mySecondScene: Level_2
   myThirdScene: Level_3
   button: {fileID: 1602101612}
+  imageTest: {fileID: 0}
   imageLocked: {fileID: 1737147082}
   locked: {fileID: 21300000, guid: fe517130b40a1454d960f7a76c627647, type: 3}
   toCollect: 0
@@ -19181,6 +19172,7 @@ MonoBehaviour:
   mySecondScene: Level_2
   myThirdScene: Level_3
   button: {fileID: 1977710065}
+  imageTest: {fileID: 0}
   imageLocked: {fileID: 0}
   locked: {fileID: 0}
   toCollect: 0
