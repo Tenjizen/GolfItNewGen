@@ -1284,6 +1284,7 @@ MonoBehaviour:
   mySecondScene: 
   myThirdScene: 
   button: {fileID: 0}
+  imageTest: {fileID: 0}
   imageLocked: {fileID: 0}
   locked: {fileID: 0}
   toCollect: 0
@@ -2471,6 +2472,7 @@ MonoBehaviour:
   mySecondScene: 
   myThirdScene: 
   button: {fileID: 0}
+  imageTest: {fileID: 0}
   imageLocked: {fileID: 0}
   locked: {fileID: 0}
   toCollect: 0
@@ -4724,6 +4726,7 @@ MonoBehaviour:
   mySecondScene: 
   myThirdScene: 
   button: {fileID: 0}
+  imageTest: {fileID: 0}
   imageLocked: {fileID: 0}
   locked: {fileID: 0}
   toCollect: 0
@@ -4885,6 +4888,7 @@ MonoBehaviour:
   mySecondScene: 
   myThirdScene: 
   button: {fileID: 0}
+  imageTest: {fileID: 0}
   imageLocked: {fileID: 0}
   locked: {fileID: 0}
   toCollect: 0
@@ -5197,7 +5201,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: ac7053e719c2d9a47871b10548687ae1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9f9d119864d23a24d994e9eae0d1a997, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9162,7 +9166,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 918930f4397d5e244946eb430373fc4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 105b11bf643c1ff419ef5a75e06a9a05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10103,6 +10107,7 @@ MonoBehaviour:
   player: {fileID: 1554836309}
   rb: {fileID: 1659023337}
   ball: {fileID: 1659023335}
+  animator: {fileID: 0}
   lr: {fileID: 0}
 --- !u!50 &1659023337
 Rigidbody2D:
@@ -10584,6 +10589,7 @@ MonoBehaviour:
   shotMax: 2
   countShot: 0
   restart: 0
+  animator: {fileID: 0}
 --- !u!4 &1732544203
 Transform:
   m_ObjectHideFlags: 0
@@ -10871,7 +10877,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 918930f4397d5e244946eb430373fc4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 105b11bf643c1ff419ef5a75e06a9a05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11605,6 +11611,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0}
   maxSpeedForGoal: 5
   inHole: 0
+  animator: {fileID: 0}
 --- !u!212 &1886881088
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12349,6 +12356,7 @@ MonoBehaviour:
   mySecondScene: 
   myThirdScene: 
   button: {fileID: 0}
+  imageTest: {fileID: 0}
   imageLocked: {fileID: 0}
   locked: {fileID: 0}
   toCollect: 0
