@@ -2834,7 +2834,7 @@ MonoBehaviour:
   credits: {fileID: 345113044}
   settings: {fileID: 1222618144}
   keys: {fileID: 1360836929}
-  SceneOne: Test
+  SceneOne: Tuto
 --- !u!1 &881836380
 GameObject:
   m_ObjectHideFlags: 0
