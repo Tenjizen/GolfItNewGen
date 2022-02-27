@@ -231,9 +231,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c48a7fef4737444b55e158fcc8995c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 50
-  minPower: {x: -4, y: -4}
-  maxPower: {x: 4, y: 4}
+  power: 40
+  minPower: {x: -40, y: -40}
+  maxPower: {x: 40, y: 40}
   dir: {fileID: 6516417278993029167}
   player: {fileID: 6516417279263745975}
   rb: {fileID: 6516417278993029168}
