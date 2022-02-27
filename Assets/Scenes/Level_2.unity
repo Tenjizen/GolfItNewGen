@@ -1236,6 +1236,7 @@ GameObject:
   - component: {fileID: 87858019}
   - component: {fileID: 87858018}
   - component: {fileID: 87858017}
+  - component: {fileID: 87858020}
   m_Layer: 0
   m_Name: Bonus
   m_TagString: Untagged
@@ -1332,6 +1333,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &87858020
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87858015}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.000061035156}
+  serializedVersion: 2
+  m_Radius: 1.1249999
 --- !u!1 &95077391
 GameObject:
   m_ObjectHideFlags: 0
@@ -8111,6 +8128,7 @@ GameObject:
   - component: {fileID: 591523889}
   - component: {fileID: 591523891}
   - component: {fileID: 591523890}
+  - component: {fileID: 591523892}
   m_Layer: 0
   m_Name: Collectible
   m_TagString: Untagged
@@ -8195,6 +8213,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &591523892
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591523888}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.94, y: 4.68}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.94, y: 4.68}
+  m_EdgeRadius: 0
 --- !u!1 &597226127
 GameObject:
   m_ObjectHideFlags: 0
@@ -26760,6 +26804,7 @@ GameObject:
   - component: {fileID: 1922266371}
   - component: {fileID: 1922266370}
   - component: {fileID: 1922266369}
+  - component: {fileID: 1922266372}
   m_Layer: 0
   m_Name: Bonus (1)
   m_TagString: Untagged
@@ -26856,6 +26901,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1922266372
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922266367}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.000030517578, y: -0.000061035156}
+  serializedVersion: 2
+  m_Radius: 1.125
 --- !u!1 &1937039319
 GameObject:
   m_ObjectHideFlags: 0
