@@ -54,7 +54,7 @@ public class WheelClubManagement : MonoBehaviour
         {
             unlockedWedge = true;
         }
-        if (Line.Instance.toCollect >= isUnlocked)
+        if (CountToCollect.Instance.toCollect >= isUnlocked)
             unlockedSanwitch = true;
 
         switch (PowerClub)

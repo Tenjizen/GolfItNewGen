@@ -17,7 +17,6 @@ public class Line : MonoBehaviour
     private Vector3 startMousePos;
     private Vector3 endMousePos;
 
-    public int toCollect = 0;
 
 
     public Animator animator;

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Hole : MonoBehaviour
 {
@@ -35,7 +37,7 @@ public class Hole : MonoBehaviour
 
             animator.SetBool("IsHole", true);
             //AudioManager.Instance.PlaySound("snd_jingle_victory");
-
+            StartCoroutine(NextScene(5));
 
         }
         else
@@ -51,5 +53,12 @@ public class Hole : MonoBehaviour
             inHole = true;
             Line.Instance.rb.velocity = velocity;
         }
+    }
+
+
+    public IEnumerator NextScene(int timer)
+    {
+        yield return new WaitForSeconds(timer);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
