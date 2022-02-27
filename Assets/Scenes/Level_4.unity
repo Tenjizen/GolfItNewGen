@@ -29510,6 +29510,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.061034665
       objectReference: {fileID: 0}
+    - target: {fileID: 5941863117208890051, guid: 9d6fc177cd9472f45bf6be919ba17f7a, type: 3}
+      propertyPath: Porte
+      value: 
+      objectReference: {fileID: 1516461235}
     - target: {fileID: 5941863117208890053, guid: 9d6fc177cd9472f45bf6be919ba17f7a, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -30396,6 +30400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1516461234}
   - component: {fileID: 1516461233}
+  - component: {fileID: 1516461235}
   m_Layer: 0
   m_Name: porte_bleu_simple_vertical
   m_TagString: Untagged
@@ -30462,12 +30467,38 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516461232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.7, y: -40, z: 0}
+  m_LocalPosition: {x: 48.4, y: -40, z: 0}
   m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1516461235
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516461232}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.53, y: 11.73}
+    newSize: {x: 0.53, y: 11.73}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.53, y: 11.73}
+  m_EdgeRadius: 0
 --- !u!1 &1517022409
 GameObject:
   m_ObjectHideFlags: 0
@@ -35891,6 +35922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1790012162}
   - component: {fileID: 1790012161}
+  - component: {fileID: 1790012163}
   m_Layer: 0
   m_Name: porte_bleu_simple_vertical (1)
   m_TagString: Untagged
@@ -35963,6 +35995,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1790012163
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790012160}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.53, y: 11.73}
+    newSize: {x: 0.53, y: 11.73}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.53, y: 11.73}
+  m_EdgeRadius: 0
 --- !u!1001 &1790978044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41435,6 +41493,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.06788422
       objectReference: {fileID: 0}
+    - target: {fileID: 5941863117208890051, guid: 9d6fc177cd9472f45bf6be919ba17f7a, type: 3}
+      propertyPath: Porte
+      value: 
+      objectReference: {fileID: 1790012163}
     - target: {fileID: 5941863117208890053, guid: 9d6fc177cd9472f45bf6be919ba17f7a, type: 3}
       propertyPath: m_SortingOrder
       value: 3
