@@ -238,7 +238,6 @@ MonoBehaviour:
   player: {fileID: 6516417279263745975}
   rb: {fileID: 6516417278993029168}
   ball: {fileID: 6516417278993029175}
-  toCollect: 0
   animator: {fileID: 6516417279263745966}
   animatorBall: {fileID: 6516417278993029164}
   animatorBallOrigin: {fileID: 6516417277515718919}
@@ -397,7 +396,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 100
   m_Positions: []
   m_Parameters:
     serializedVersion: 3

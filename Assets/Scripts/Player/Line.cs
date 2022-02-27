@@ -110,12 +110,13 @@ public class Line : MonoBehaviour
                 StartCoroutine(AnimLancer(0.2f));
                 endMousePos = cam.ScreenToWorldPoint(Input.mousePosition);
                 endMousePos.z = 15;
-                Vector2 dist = (startMousePos - endMousePos).normalized;
-                Debug.Log(dist);
+                Vector2 dist = (startMousePos - endMousePos)/*.normalized*/;
+                Debug.Log(dist+" dist");
                 force = new Vector2(
-                    Mathf.Clamp(dist.x, minPower.x, maxPower.x),
-                    Mathf.Clamp(dist.y, minPower.y, maxPower.y)
+                    Mathf.Clamp(dist.x, minPower.x, maxPower.x)/4,
+                    Mathf.Clamp(dist.y, minPower.y, maxPower.y)/4
                     );
+                Debug.Log(force+" force");
             }
         }
     }
@@ -125,8 +126,7 @@ public class Line : MonoBehaviour
         Debug.Log("gklfdqsghjsvjnkjdgnfhvksdfgj THIRD");
         animator.SetBool("EndLancer", false);
 
-
-        rb.AddForce(force * power, ForceMode2D.Impulse);
+        rb.AddForce(force * power/4, ForceMode2D.Impulse);
         dir.EndLine();
         Debug.Log(endMousePos);
         CircleCollider.Instance.countShot++;
