@@ -3064,14 +3064,14 @@ Transform:
   m_Children:
   - {fileID: 1958153005}
   - {fileID: 2060874645}
+  - {fileID: 414489900}
   - {fileID: 2852043760668053048}
   - {fileID: 1995181081}
-  - {fileID: 414489900}
   - {fileID: 1452387271}
   - {fileID: 579840751}
   - {fileID: 1839878292}
-  - {fileID: 1185355326}
   - {fileID: 1539810423}
+  - {fileID: 1185355326}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3156,7 +3156,7 @@ Transform:
   m_LocalScale: {x: 0.42689094, y: 0.42482665, z: 1}
   m_Children: []
   m_Father: {fileID: 382501073}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &414489901
 BoxCollider2D:
@@ -17811,6 +17811,10 @@ PrefabInstance:
     - target: {fileID: 6516417278242534971, guid: bbcc51386412eec4eb60eb4ec3092f64, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516417278993029165, guid: bbcc51386412eec4eb60eb4ec3092f64, type: 3}
+      propertyPath: minPower.x
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 6516417278993029170, guid: bbcc51386412eec4eb60eb4ec3092f64, type: 3}
       propertyPath: m_SortingOrder
