@@ -96,7 +96,6 @@ public class Test2Fov : MonoBehaviour
                         StartCoroutine(Reticle.Instance.RestartLoadScene(5));
                         Debug.Log("see you");
                         Reticle.Instance.ready = false;
-
                     }
                 }
 
