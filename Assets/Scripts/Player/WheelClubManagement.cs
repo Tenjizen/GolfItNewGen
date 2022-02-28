@@ -13,7 +13,7 @@ public class WheelClubManagement : MonoBehaviour
     public Image selectedItem;
     public Image icon;
 
-    public string myFirstScene, mySecondScene, myThirdScene;
+    public int myFirstScene, mySecondScene, myThirdScene;
 
     public Button button;
     public Image imageTest;
@@ -41,16 +41,16 @@ public class WheelClubManagement : MonoBehaviour
     private void Update()
     {
         Scene scene = SceneManager.GetActiveScene();
-        if (scene.name == myFirstScene)
+        if (scene.buildIndex >= myFirstScene)
         {
             unlockedDriver = true;
         }
 
-        else if (scene.name == mySecondScene)
+        if (scene.buildIndex >= mySecondScene)
         {
             unlockedPutter = true;
         }
-        else if (scene.name == myThirdScene)
+        if (scene.buildIndex >= myThirdScene)
         {
             unlockedWedge = true;
         }

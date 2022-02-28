@@ -4531,6 +4531,18 @@ PrefabInstance:
       propertyPath: imageLocked
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7615044942342466257, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: myFirstScene
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615044942342466257, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: myThirdScene
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615044942342466257, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: mySecondScene
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7615044942342466260, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
       propertyPath: m_Type
       value: 0
@@ -4667,6 +4679,18 @@ PrefabInstance:
       propertyPath: wheelClub
       value: 
       objectReference: {fileID: 1844050464}
+    - target: {fileID: 7615044942837956709, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: myFirstScene
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615044942837956709, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: myThirdScene
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615044942837956709, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: mySecondScene
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7615044942837956711, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
       propertyPath: m_SizeDelta.x
       value: 471
