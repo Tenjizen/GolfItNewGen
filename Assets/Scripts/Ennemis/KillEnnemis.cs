@@ -26,6 +26,8 @@ public class KillEnnemis : MonoBehaviour
             fov.SpriteRendererLeftRight.enabled = false;
             SpriteRenderer.sprite = spriteEnnemisDie;
             transform.Find("FOV").gameObject.SetActive(false);
+            AudioManager.Instance.PlaySound("snd_ennemy_death1");
+
             StartCoroutine(AnimAttacking(0.5f));
         }
     }
@@ -44,6 +46,7 @@ public class KillEnnemis : MonoBehaviour
             fov.SpriteRendererLeftRight.enabled = false;
             SpriteRenderer.sprite = spriteEnnemisDie;
             transform.Find("FOV").gameObject.SetActive(false);
+            AudioManager.Instance.PlaySound("snd_ennemy_death1");
             Debug.Log("triggers BALL!");
             //Test2Fov.Instance.animatorLeftRight.SetBool("IsAlive", false);
 
