@@ -19,12 +19,14 @@ public class KillEnnemis : MonoBehaviour
     {
         if (collisionWithEnnemi && Input.GetKeyDown(KeyCode.E))
         {
-            animator.SetBool("IsAttacking", true);
-            AudioManager.Instance.PlaySound("snd_hit_man");
-            AudioManager.Instance.PlaySound("snd_ennemy_death1");
+            animator.SetBool("IsAttacking", true); 
+            fov.animatorLeftRight.enabled = false;
+            fov.animatorFrontBack.enabled = false;
+            fov.SpriteRenderer.enabled = true;
+            fov.SpriteRendererLeftRight.enabled = false;
             SpriteRenderer.sprite = spriteEnnemisDie;
             transform.Find("FOV").gameObject.SetActive(false);
-            StartCoroutine(AnimAttacking(1.5f));
+            StartCoroutine(AnimAttacking(0.5f));
         }
     }
     private void OnTriggerEnter2D(Collider2D col)
