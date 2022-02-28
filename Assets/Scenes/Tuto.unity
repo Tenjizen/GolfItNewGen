@@ -3913,9 +3913,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 5af35ab2e0e9c044182f236ac6c731c0, type: 3}
     - target: {fileID: 7615044941330596204, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: line
+      value: 
+      objectReference: {fileID: 429962300}
+    - target: {fileID: 7615044941330596204, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
       propertyPath: locked
       value: 
       objectReference: {fileID: 21300000, guid: f56981cb9e80c314993fee0d9e67619c, type: 3}
+    - target: {fileID: 7615044941330596204, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: wheelClub
+      value: 
+      objectReference: {fileID: 1488169740}
     - target: {fileID: 7615044941330596206, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
       propertyPath: m_SizeDelta.x
       value: 472
@@ -3997,9 +4005,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7615044942342466257, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: line
+      value: 
+      objectReference: {fileID: 429962300}
+    - target: {fileID: 7615044942342466257, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
       propertyPath: locked
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7615044942342466257, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: wheelClub
+      value: 
+      objectReference: {fileID: 1488169740}
     - target: {fileID: 7615044942342466257, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
       propertyPath: imageLocked
       value: 
@@ -4037,9 +4053,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: b5ca41663ea68b249a70d6a7ef4bb1b7, type: 3}
     - target: {fileID: 7615044942456132556, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: line
+      value: 
+      objectReference: {fileID: 429962300}
+    - target: {fileID: 7615044942456132556, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
       propertyPath: locked
       value: 
       objectReference: {fileID: 21300000, guid: f56981cb9e80c314993fee0d9e67619c, type: 3}
+    - target: {fileID: 7615044942456132556, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: wheelClub
+      value: 
+      objectReference: {fileID: 1488169740}
     - target: {fileID: 7615044942456132558, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
       propertyPath: m_SizeDelta.x
       value: 473
@@ -4065,9 +4089,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 6822bca0957bc2d43851d85ade0c418e, type: 3}
     - target: {fileID: 7615044942504662493, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: line
+      value: 
+      objectReference: {fileID: 429962300}
+    - target: {fileID: 7615044942504662493, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
       propertyPath: locked
       value: 
       objectReference: {fileID: 21300000, guid: f56981cb9e80c314993fee0d9e67619c, type: 3}
+    - target: {fileID: 7615044942504662493, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: wheelClub
+      value: 
+      objectReference: {fileID: 1488169740}
     - target: {fileID: 7615044942504662495, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
       propertyPath: m_SizeDelta.x
       value: 472
@@ -4113,9 +4145,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 2a0dd9db9192e94408e551cfb092f817, type: 3}
     - target: {fileID: 7615044942837956709, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: line
+      value: 
+      objectReference: {fileID: 429962300}
+    - target: {fileID: 7615044942837956709, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
       propertyPath: locked
       value: 
       objectReference: {fileID: 21300000, guid: f56981cb9e80c314993fee0d9e67619c, type: 3}
+    - target: {fileID: 7615044942837956709, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
+      propertyPath: wheelClub
+      value: 
+      objectReference: {fileID: 1488169740}
     - target: {fileID: 7615044942837956711, guid: 2395ddbaf91dd4a4b91782f28cc0fd55, type: 3}
       propertyPath: m_SizeDelta.x
       value: 471
@@ -14781,6 +14821,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60917b3b232b4dd46b5f2cc0bcc9229b, type: 3}
+--- !u!114 &1488169740 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6731165240708483511, guid: 60917b3b232b4dd46b5f2cc0bcc9229b, type: 3}
+  m_PrefabInstance: {fileID: 1488169739}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b0bd6f176ea654289d7aa4e103b9bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1500495203
 GameObject:
   m_ObjectHideFlags: 0
