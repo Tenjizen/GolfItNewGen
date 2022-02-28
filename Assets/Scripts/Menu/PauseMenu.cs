@@ -23,6 +23,8 @@ public class PauseMenu : MonoBehaviour
             if (!pauseMenu.gameObject.activeInHierarchy)
             {
                 pauseMenu.SetActive(true);
+                Reticle.Instance.ready = false;
+
                 Time.timeScale = 0;
                 if (settings.gameObject.activeInHierarchy || credits.gameObject.activeInHierarchy)
                     OnClickPauseMenu();
@@ -33,6 +35,7 @@ public class PauseMenu : MonoBehaviour
             }
             else if (pauseMenu.gameObject.activeInHierarchy)
             {
+                Reticle.Instance.ready = true;
                 pauseMenu.SetActive(false);
                 Time.timeScale = 1;
             }
@@ -75,11 +78,13 @@ public class PauseMenu : MonoBehaviour
     }
     public void OnClickResume()
     {
+        Reticle.Instance.ready = true;
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
     }
     public void OnClickRestart()
     {
+        Reticle.Instance.ready = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
     }
