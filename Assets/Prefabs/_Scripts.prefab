@@ -85,8 +85,8 @@ MonoBehaviour:
   line: {fileID: 0}
   club: 1
   powerHybride: 40
-  powerPutter: 20
-  powerDriver: 60
+  powerPutter: 15
+  powerDriver: 65
   powerWedge: 50
   powerSandwitch: 30
   wheel: {fileID: 0}
