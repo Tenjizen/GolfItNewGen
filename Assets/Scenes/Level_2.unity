@@ -14006,8 +14006,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ce mur \xE0 l\u2019air fragile, le Driver pourrait propulser la balle
-    \xE0 travers"
+  m_text: "Ce mur a l\u2019air fragile, le Driver pourrait propulser la balle \xE0
+    travers"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cbdcea5901260554b877f69c6532b107, type: 2}
   m_sharedMaterial: {fileID: -6610651666789569847, guid: cbdcea5901260554b877f69c6532b107, type: 2}
