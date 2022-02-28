@@ -36011,11 +36011,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4099827888983339547, guid: 918edfcef11d3134eae501a6e8a59766, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -507
+      value: -818
       objectReference: {fileID: 0}
     - target: {fileID: 4099827888983339547, guid: 918edfcef11d3134eae501a6e8a59766, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 221
+      value: 430
       objectReference: {fileID: 0}
     - target: {fileID: 4099827888983339549, guid: 918edfcef11d3134eae501a6e8a59766, type: 3}
       propertyPath: m_Sprite
