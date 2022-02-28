@@ -1156,10 +1156,14 @@ PrefabInstance:
     - target: {fileID: 1231504023647033512, guid: 8345acc6f85731b4f9bc44aef9b818a9, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6f41df0c7e18c9a4d8442cfcea6a6b2f, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1231504023647033512, guid: 8345acc6f85731b4f9bc44aef9b818a9, type: 3}
       propertyPath: m_SortingOrder
       value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231504023647033512, guid: 8345acc6f85731b4f9bc44aef9b818a9, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1231504023647033513, guid: 8345acc6f85731b4f9bc44aef9b818a9, type: 3}
       propertyPath: m_RootOrder
@@ -1167,11 +1171,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1231504023647033513, guid: 8345acc6f85731b4f9bc44aef9b818a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 98.98
+      value: 17.9
       objectReference: {fileID: 0}
     - target: {fileID: 1231504023647033513, guid: 8345acc6f85731b4f9bc44aef9b818a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.43
+      value: 463.6
       objectReference: {fileID: 0}
     - target: {fileID: 1231504023647033513, guid: 8345acc6f85731b4f9bc44aef9b818a9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9068,11 +9072,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6516417278242534964, guid: bbcc51386412eec4eb60eb4ec3092f64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -89.3
+      value: -88.1
       objectReference: {fileID: 0}
     - target: {fileID: 6516417278242534964, guid: bbcc51386412eec4eb60eb4ec3092f64, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.2
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: 6516417278242534964, guid: bbcc51386412eec4eb60eb4ec3092f64, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26359,7 +26363,7 @@ Transform:
   m_LocalScale: {x: 90.28406, y: 174.72437, z: 2.2513}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1457162301
 GameObject:
@@ -29215,7 +29219,7 @@ Transform:
   m_Children:
   - {fileID: 1649799777}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1636451005
 PrefabInstance:
