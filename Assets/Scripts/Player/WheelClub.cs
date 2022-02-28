@@ -12,7 +12,7 @@ public class WheelClub : MonoBehaviour
         Putter = 2,
         Driver = 3,
         Wedge = 4,
-        Sandwitch = 5
+        Sandwich = 5
     }
 
     public Line line;

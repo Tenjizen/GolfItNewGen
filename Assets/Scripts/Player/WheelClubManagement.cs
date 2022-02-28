@@ -23,7 +23,7 @@ public class WheelClubManagement : MonoBehaviour
     private bool unlockedDriver = false;
     private bool unlockedPutter = false;
     private bool unlockedWedge = false;
-    private bool unlockedSanwitch = false;
+    private bool unlockedSanwich = false;
 
     [SerializeField] private int isUnlocked;
 
@@ -55,7 +55,7 @@ public class WheelClubManagement : MonoBehaviour
             unlockedWedge = true;
         }
         if (CountToCollect.Instance.toCollect >= isUnlocked)
-            unlockedSanwitch = true;
+            unlockedSanwich = true;
 
         switch (PowerClub)
         {
@@ -99,8 +99,8 @@ public class WheelClubManagement : MonoBehaviour
                     imageLocked.enabled = false;
                 }
                 break;
-            case WheelClub.PowerClub.Sandwitch:
-                if (!unlockedSanwitch)
+            case WheelClub.PowerClub.Sandwich:
+                if (!unlockedSanwich)
                 {
                     button.enabled = false;
                     //button.image.enabled = false;
@@ -147,8 +147,8 @@ public class WheelClubManagement : MonoBehaviour
                     wheelClub.Driver = false;
                 }
                 break;
-            case WheelClub.PowerClub.Sandwitch:
-                if (unlockedSanwitch)
+            case WheelClub.PowerClub.Sandwich:
+                if (unlockedSanwich)
                 {
                     Debug.Log("unloock askip"); 
                     line.power = wheelClub.powerSandwitch;
