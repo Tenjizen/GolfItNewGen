@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public GameObject pause;
     public GameObject pauseMenu;
     public GameObject credits;
     public GameObject settings;
     public GameObject keys;
     private void Start()
     {
+        pause.SetActive(false);
         pauseMenu.SetActive(false);
         settings.SetActive(false);
         credits.SetActive(false);
@@ -20,8 +22,9 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!pauseMenu.gameObject.activeInHierarchy)
+            if (!pause.gameObject.activeInHierarchy)
             {
+                pause.SetActive(true);
                 pauseMenu.SetActive(true);
                 Reticle.Instance.ready = false;
 
@@ -36,6 +39,7 @@ public class PauseMenu : MonoBehaviour
             else if (pauseMenu.gameObject.activeInHierarchy)
             {
                 Reticle.Instance.ready = true;
+                pause.SetActive(false);
                 pauseMenu.SetActive(false);
                 Time.timeScale = 1;
             }
@@ -80,6 +84,7 @@ public class PauseMenu : MonoBehaviour
     {
         Reticle.Instance.ready = true;
         Time.timeScale = 1;
+        pause.SetActive(false);
         pauseMenu.SetActive(false);
     }
     public void OnClickRestart()

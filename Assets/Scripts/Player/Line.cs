@@ -26,6 +26,9 @@ public class Line : MonoBehaviour
     public SpriteRenderer SpriteRenderer;
     public SpriteRenderer SpriteRendererBall;
 
+    public GameObject Wheel;
+    public GameObject Pause;
+
     public static Line Instance;
 
 
@@ -51,11 +54,11 @@ public class Line : MonoBehaviour
         }
 
 
-        if (rb.velocity.magnitude > 0.4f || WheelClub.Instance.wheel.activeInHierarchy)
+        if (rb.velocity.magnitude > 0.4f || Wheel.activeInHierarchy || Pause.activeInHierarchy)
         {
             Reticle.Instance.ready = false;
         }
-        else if (rb.velocity.magnitude < 0.4f && !Hole.Instance.inHole && !CircleCollider.Instance.restart && !WheelClub.Instance.wheel.activeInHierarchy)
+        else if (rb.velocity.magnitude < 0.4f && !Hole.Instance.inHole && !CircleCollider.Instance.restart && !Wheel.activeInHierarchy && !Pause.activeInHierarchy)
         {
             Reticle.Instance.ready = true;
             animatorBall.SetBool("IsDriver", false);

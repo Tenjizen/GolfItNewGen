@@ -120,7 +120,7 @@ public class WheelClubManagement : MonoBehaviour
     {
         line.power = wheelClub.powerHybride;
 
-        selectedItem.sprite = clamerde.Instance.club.sprite;
+        //selectedItem.sprite = clamerde.Instance.club.sprite;
     }
     public void OnClick()
     {
