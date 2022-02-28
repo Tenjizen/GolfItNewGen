@@ -14847,6 +14847,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 977262022}
     - target: {fileID: 6731165240708483512, guid: 60917b3b232b4dd46b5f2cc0bcc9229b, type: 3}
+      propertyPath: shotMax
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6731165240708483512, guid: 60917b3b232b4dd46b5f2cc0bcc9229b, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 977262020}
