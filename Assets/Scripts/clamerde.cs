@@ -27,6 +27,6 @@ public class clamerde : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = ""+CircleCollider.Instance.countShot;
+        text.text = ""+ (CircleCollider.Instance.shotMax - CircleCollider.Instance.countShot);
     }
 }
