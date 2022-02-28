@@ -21077,11 +21077,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4099827888983339547, guid: 918edfcef11d3134eae501a6e8a59766, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -795.77
+      value: -507
       objectReference: {fileID: 0}
     - target: {fileID: 4099827888983339547, guid: 918edfcef11d3134eae501a6e8a59766, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 433
+      value: 221
       objectReference: {fileID: 0}
     - target: {fileID: 4099827888983339549, guid: 918edfcef11d3134eae501a6e8a59766, type: 3}
       propertyPath: m_Sprite
